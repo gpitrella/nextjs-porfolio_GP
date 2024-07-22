@@ -47,17 +47,17 @@ const about = () => {
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
                 <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">Biography</h2>
                 <p className="font-meduim">
-                 Hi, I'm Kaoutar laouaj, a web full stack developer with a passion for creating beautiful, functional, 
+                 Hi, I&apos;m Kaoutar laouaj, a web full stack developer with a passion for creating beautiful, functional, 
 and user-centered digital experiences. With 5 years of experience in the field. I am always looking for 
 new and innovative ways to create new projects.
 </p>
 <p className="my-4 font-meduim">
-I believe that development is about more than just making things look pretty and functional – it's about solving problems and 
+I believe that development is about more than just making things look pretty and functional &mdash; it&apos;s about solving problems and 
 creating intuitive, enjoyable experiences for users. 
 </p>
 
 <p className="font-meduim">
-Whether I'm working on a website, mobile app, or 
+Whether I&apos;m working on a website, mobile app, or 
 other digital product, I bring my commitment to design excellence and user-centered thinking to 
 every project I work on. I look forward to the opportunity to bring my skills and passion to your next project.
 </p>
