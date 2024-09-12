@@ -43,6 +43,17 @@ const Experience = () => {
         style={{scaleY: scrollYProgress}}
         className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]"/>
        <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
+       <Details 
+  position="Intern Oujda" company="SEOMANIAK" 
+  companyLink="www.google.com"
+  time="07/2024 – 09/2024" address="Oujda"
+  work="
+  Development of the Chafaf Entrepreneur platform: Specifically, I developed the 
+  pages related to the entrepreneur role, which is an extension of the larger Chafaf 
+  platform. Chafaf Entrepreneur is a website that allows investors to invest in various 
+  projects in accordance with Islamic criteria for entrepreneurs. The project uses 
+  Angular for the frontend and .NET for the backend."
+/>
   <Details 
     position="Intern Oujda" company="ANCFCC" 
     companyLink="www.google.com"
