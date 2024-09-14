@@ -44,6 +44,7 @@ const Skills = () => {
           <Skill name="Figma" x="-270px" y="-150px"/>
           <Skill name=".NET" x="-370px" y="-1px"/>
           <Skill name="C#" x="-270px" y="80px"/>
+          <Skill name="dart" x="-150px" y="20px"/>
           <Skill name="JAVA" x="-180px" y="120px"/>
           <Skill name="Spring" x="-490px" y="50px"/>
           <Skill name="MySql" x="-200px" y="260px"/>
