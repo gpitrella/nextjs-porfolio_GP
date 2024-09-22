@@ -44,6 +44,11 @@ const Certif = () => {
               date="June 2024" 
               link="/images/certificats/kaoutarlaouaj_CCNAv7_GI4_2_certificate.pdf" 
             />
+             <Certificat 
+              title="Spring Boot For Beginners" 
+              date="mars 2024" 
+              link="/images/certificats/certificate-of-completion-for-getting-started-with-spring-boot.pdf" 
+            />
           <Certificat 
               title="C# .NET Certificate: Professional software development with C#" 
               date="January 2024" 
