@@ -109,8 +109,8 @@ const projects = () => {
     title="P2E Project Management Platform"
     img={project1}
     summary="A modular P2E platform built with ReactJS and Spring. It includes a scheduling calendar for efficient project and candidate management."
-    link="https://github.com/ImeneLEG/reactFront.git"
-    github="https://github.com/HajarDobli/PFA.git"
+    link="https://github.com/HajarDobli/ElevateUMP"
+    github="https://github.com/HajarDobli/ElevateUMP"
     type="Modular Project Management Platform"
 />
 

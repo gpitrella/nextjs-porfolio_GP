@@ -43,6 +43,11 @@ const Education = () => {
         style={{scaleY: scrollYProgress}}
         className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]"/>
       <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
+      <Details 
+        type="Third year of the engineering cycle." time="2025" 
+        place="ENSA Oujda"
+        info="Computer Science."
+    />
     <Details 
         type="Second year of engineering cycle" time="2024" 
         place="ENSA Oujda"
