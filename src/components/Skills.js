@@ -40,28 +40,28 @@ const Skills = () => {
         </motion.div>
 
         {/* Adjust positions for responsiveness */}
-        <Skill name="HTML" x="400px" y="20px" />
-        <Skill name="CSS" x="-50px" y="-100px" />
-        <Skill name="JavaScript" x="200px" y="60px" />
-        <Skill name="PHP" x="0px" y="120px" />
-        <Skill name="Bootstrap" x="270px" y="-150px" />
-        <Skill name="ReactJs" x="150px" y="-120px" />
-        <Skill name="NodeJs" x="320px" y="-50px" />
-        <Skill name="NextJs" x="0px" y="-200px" />
-        <Skill name="TypeScript" x="-250px" y="180px" />
-        <Skill name="Angular" x="180px" y="180px" />
-        <Skill name="TailWindCSS" x="450px" y="100px" />
-        <Skill name="LARAVEL" x="220px" y="-250px" />
-        <Skill name="Smyphony" x="-220px" y="-250px" />
-        <Skill name="JAVAJEE" x="-260px" y="-50px" />
-        <Skill name="Figma" x="-270px" y="-150px" />
-        <Skill name=".NET" x="-370px" y="-1px" />
-        <Skill name="C#" x="-270px" y="80px" />
-        <Skill name="dart" x="-150px" y="20px" />
-        <Skill name="JAVA" x="-180px" y="120px" />
-        <Skill name="Spring" x="-490px" y="50px" />
-        <Skill name="MySql" x="-200px" y="260px" />
-        <Skill name="MongoDb" x="110px" y="260px" />
+        <Skill name="HTML" x="20vw" y="2vw" />
+        <Skill name="CSS" x="-5vw" y="-10vw" />
+        <Skill name="JavaScript" x="10vw" y="6vw" />
+        <Skill name="PHP" x="0vw" y="12vw" />
+        <Skill name="Bootstrap" x="14vw" y="-15vw" />
+        <Skill name="ReactJs" x="10vw" y="-12vw" />
+        <Skill name="NodeJs" x="15vw" y="-5vw" />
+        <Skill name="NextJs" x="0vw" y="-20vw" />
+        <Skill name="TypeScript" x="-20vw" y="18vw" />
+        <Skill name="Angular" x="18vw" y="18vw" />
+        <Skill name="TailWindCSS" x="25vw" y="10vw" />
+        <Skill name="LARAVEL" x="22vw" y="-25vw" />
+        <Skill name="Symfony" x="-22vw" y="-25vw" />
+        <Skill name="JAVAJEE" x="-26vw" y="-5vw" />
+        <Skill name="Figma" x="-27vw" y="-15vw" />
+        <Skill name=".NET" x="-30vw" y="-1vw" />
+        <Skill name="C#" x="-27vw" y="8vw" />
+        <Skill name="Dart" x="-15vw" y="2vw" />
+        <Skill name="JAVA" x="-18vw" y="12vw" />
+        <Skill name="Spring" x="-35vw" y="5vw" />
+        <Skill name="MySql" x="-20vw" y="26vw" />
+        <Skill name="MongoDb" x="11vw" y="26vw" />
       </div>
     </>
   );
