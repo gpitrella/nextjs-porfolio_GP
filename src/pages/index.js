@@ -44,7 +44,7 @@ export default function Home() {
                 Explore my latest projects and articles, showcasing my expertise in React.js and web development.
               </p>
               <div className='flex items-center self-start mt-2 lg:self-center'>
-                <Link href="/CV_kaoutar_laouaj.pdf" target="_blank"
+                <Link href="\GabrielPitrella_CV-SoftwareEngineer.pdf" target="_blank"
                   className="flex items-center bg-dark text-light p-2.5 px-2 rounded-lg text-lg font-semibold
                   hover:bg-light hover:text-dark border-2 border-transparent hover:border-dark
                   dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
@@ -52,7 +52,7 @@ export default function Home() {
                 >
                   CV <LinkArrow className="w-4 ml-1" />
                 </Link>
-                <Link href="mailto:kaoutar.laouaj@ump.ac.ma" target="_blank"
+                <Link href="mailto:gabrielpitrella@gmail.com" target="_blank"
                   className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base"
                 >
                   Contact me

@@ -54,21 +54,14 @@ const NavBar = () => {
             <CustomLink href="/Certif" title="Certificats" className='ml-4'/> 
             </nav> 
             <nav className="flex items-center justify-end flex-wrap">
-            <motion.a href="https://twitter.com/Kaoutar_Laouaj" target={"_blank"}
-            whileHover={{y:-2 }}
-            whileTap={{scale:0.9}}
-            className="w-6 mx-3"
-            >
-              <TwitterIcon />
-            </motion.a>
-            <motion.a href="https://github.com/Kaoutarlaouaj" target={"_blank"}
+            <motion.a href="https://github.com/gpitrella" target={"_blank"}
             className="w-6 mx-3"
             whileHover={{y:-2 }}
             whileTap={{scale:0.9}}
             >
               <GithubIcon /> 
             </motion.a>   
-            <motion.a href="https://www.linkedin.com/in/kaoutar-laouaj-14b121244/" target={"_blank"}
+            <motion.a href="https://www.linkedin.com/in/gabrielpitrella/" target={"_blank"}
             className="w-6 mx-3"
             whileHover={{y:-2 }}
             whileTap={{scale:0.9}}
