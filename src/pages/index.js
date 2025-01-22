@@ -25,11 +25,11 @@ export default function Home() {
       <main className="flex items-center text-dark w-full min-h-screen">
         <Layout className='pt-0 md:p-16 sm:pt-8'>
           <div className="flex flex-col items-center justify-between w-full lg:flex-col">
-            <div className='w-20 md:w-20'>
+            <div className='w-full md:w-full'>
               <Image
                 src={profilePic}
                 alt="Gabriel Pitrella"
-                className='w-1/8 h-auto lg:hidden md:inline-block md:w-full'
+                className='w-12 h-auto lg:w-12 md:inline-block md:w-12 rounded-full'
                 priority
                 sizes="(max-width:768px) 10vw, (max-width: 1200px) 5vw, 5vw"
               />
