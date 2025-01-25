@@ -25,11 +25,11 @@ export default function Home() {
       <main className="flex items-center text-dark w-full min-h-screen">
         <Layout className='pt-0 md:p-16 sm:pt-8'>
           <div className="flex flex-col items-center justify-between w-full lg:flex-col">
-            <div className='w-20 md:w-20'>
+            <div className='w-full md:w-full'>
               <Image
                 src={profilePic}
                 alt="Gabriel Pitrella"
-                className='w-1/8 h-auto lg:hidden md:inline-block md:w-full'
+                className='w-12 h-auto lg:w-12 md:inline-block md:w-12 rounded-full'
                 priority
                 sizes="(max-width:768px) 10vw, (max-width: 1200px) 5vw, 5vw"
               />
@@ -44,7 +44,7 @@ export default function Home() {
                 Explore my latest projects and articles, showcasing my expertise in React.js and web development.
               </p>
               <div className='flex items-center self-start mt-2 lg:self-center'>
-                <Link href="/CV_kaoutar_laouaj.pdf" target="_blank"
+                <Link href="\GabrielPitrella_CV-SoftwareEngineer.pdf" target="_blank"
                   className="flex items-center bg-dark text-light p-2.5 px-2 rounded-lg text-lg font-semibold
                   hover:bg-light hover:text-dark border-2 border-transparent hover:border-dark
                   dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
@@ -52,7 +52,7 @@ export default function Home() {
                 >
                   CV <LinkArrow className="w-4 ml-1" />
                 </Link>
-                <Link href="mailto:kaoutar.laouaj@ump.ac.ma" target="_blank"
+                <Link href="mailto:gabrielpitrella@gmail.com" target="_blank"
                   className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base"
                 >
                   Contact me
