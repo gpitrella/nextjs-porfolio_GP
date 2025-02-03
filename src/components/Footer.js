@@ -8,7 +8,7 @@ const Footer = () => {
             <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
             <div className="flex items-center lg:py-2">
            Build With <span className="text-primary dark:text-primaryDark text-2xl px-1">&#9825;</span> 
-           by&nbsp; <Link href="https://github.com/Kaoutarlaouaj" className="underline underline-offset-2 ">Kaoutar laouaj</Link>
+           by&nbsp; <Link href="https://github.com/gpitrella" className="underline underline-offset-2 ">Gabriel Pitrella</Link>
             </div>
 
             </Layout>

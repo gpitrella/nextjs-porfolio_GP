@@ -24,24 +24,29 @@ export default function Home() {
       <TransitionEffect />
       <main className="flex items-center text-dark w-full min-h-screen">
         <Layout className='pt-0 md:p-16 sm:pt-8'>
-          <div className="flex flex-col items-center justify-between w-full lg:flex-col">
-            <div className='w-full md:w-full'>
+          <div className="flex flex-col items-left justify-between w-full lg:flex-col lg:items-center md:items-center">
+            <div className='w-max md:self-center flex flex-row content-center gap-2.5'>
               <Image
                 src={profilePic}
                 alt="Gabriel Pitrella"
-                className='w-12 h-auto lg:w-12 md:inline-block md:w-12 rounded-full'
+                className='w-16 h-16 rounded-full lg:w-12 lg:h-12' 
                 priority
                 sizes="(max-width:768px) 10vw, (max-width: 1200px) 5vw, 5vw"
+              />
+              <AnimatedText
+                text="Software Engineer Full Stack"
+                className='!text-lg !text-left md:ttext-lg'
               />
             </div>
             <div className='w-full flex flex-col items-center self-center lg:w-full lg:text-center'>
               <AnimatedText
-                text="Turning Vision Into Reality With Code And Design."
+                text="Developing Solutions"
                 className='!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl'
               />
               <p className='my-4 text-base font-medium dark:text-light md:text-sm sm:text-xs'>
-                As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications.
-                Explore my latest projects and articles, showcasing my expertise in React.js and web development.
+                Software Engineer Full Stack with over 4 years of hands-on expertise in crafting and implementing 
+                efficient solutions using diverse technologies, including JavaScript, TypeScript, NodeJS, ReactJS, 
+                Express, PostgreSQL, MongoDB and more.
               </p>
               <div className='flex items-center self-start mt-2 lg:self-center'>
                 <Link href="\GabrielPitrella_CV-SoftwareEngineer.pdf" target="_blank"
@@ -62,7 +67,7 @@ export default function Home() {
           </div>
         </Layout>
         <HireMe />
-        <div className='absolute right-0 bottom-0 inline-block w-20 md:hidden'>
+        <div className='absolute right-10 bottom-0 inline-block w-20 md:hidden'>
           <Image src={lightBulb} alt="Light Bulb" className='w-full h-auto' />
         </div>
       </main>
