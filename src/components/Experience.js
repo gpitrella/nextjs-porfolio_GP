@@ -7,7 +7,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]"
+      className="my-8 first:mt-0 last:mb-0 w-[70%] mx-auto flex flex-col items-center justify-between md:w-[80%]"
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -43,7 +43,7 @@ const Experience = () => {
 
   return (
     <div className="my-64 md:my-32 xs:my-20">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
+      <h2 className="font-bold text-5xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
         Experience
       </h2>
 
@@ -55,17 +55,17 @@ const Experience = () => {
 
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            position="Intern Oujda"
-            company="SEOMANIAK"
-            companyLink="www.google.com"
-            time="07/2024 – 09/2024"
-            address="Oujda"
-            work="Development of the Chafaf Entrepreneur platform: Specifically, I developed the 
-            pages related to the entrepreneur role, which is an extension of the larger Chafaf 
-            platform. Chafaf Entrepreneur is a website that allows investors to invest in various 
-            projects in accordance with Islamic criteria for entrepreneurs. The project uses 
-            Angular for the frontend and .NET for the backend."
+            position="Full Stack Developer"
+            company="HubSnacks"
+            companyLink="https://www.hubsnacks.com/"
+            time="06/2022 – Current"
+            address="London"
+            work="Creation of web pages and landing pages, monitoring of web development according to design, 
+            optimization of websites, troubleshooting of client websites, integration of websites with 
+            different platforms and monitoring of tasks through tickets. See the latest developments in my profile. 
+            Stacks: HubSpot, HubL, Javascript, JQuery, HTML, CSS, RESTful APIs, Figma, Scrum/Agile Methodology, Slack"
           />
+
           <Details
             position="Intern Oujda"
             company="ANCFCC"
