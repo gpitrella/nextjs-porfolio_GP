@@ -2,7 +2,7 @@ import { motion, useScroll } from "framer-motion";
 import React, { useRef } from "react";
 import LiIcon from "./LiIcon";
 
-const Details = ({ position, company, companyLink, time, address, work }) => {
+const Details = ({ position, company, companyLink, time, address, work, stacks }) => {
   const ref = useRef(null);
   return (
     <li
@@ -17,18 +17,26 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
       >
         <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
           {position}&nbsp;
-          <a
-            href={companyLink}
-            target="_blank"
-            className="text-primary dark:text-primaryDark capitalize"
-          >
-            @{company}
-          </a>
+          { companyLink ? 
+            <a
+              href={companyLink}
+              target="_blank"
+              className="text-primary dark:text-primaryDark capitalize"
+            >
+              @{company}
+            </a>
+            : <span
+              className="text-primary dark:text-primaryDark capitalize"
+            >
+              @{company}
+            </span>
+          }
         </h3>
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
           {time} | {address}
         </span>
         <p className="font-medium w-full md:text-sm">{work}</p>
+        <p className="font-medium w-full md:text-sm"><strong>Stacks: </strong>{stacks}</p>
       </motion.div>
     </li>
   );
@@ -42,8 +50,8 @@ const Experience = () => {
   });
 
   return (
-    <div className="my-64 md:my-32 xs:my-20">
-      <h2 className="font-bold text-5xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
+    <div className="my-32 md:my-32 xs:my-20">
+      <h2 className="font-bold text-5xl mb-20 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
         Experience
       </h2>
 
@@ -62,43 +70,44 @@ const Experience = () => {
             address="London"
             work="Creation of web pages and landing pages, monitoring of web development according to design, 
             optimization of websites, troubleshooting of client websites, integration of websites with 
-            different platforms and monitoring of tasks through tickets. See the latest developments in my profile. 
-            Stacks: HubSpot, HubL, Javascript, JQuery, HTML, CSS, RESTful APIs, Figma, Scrum/Agile Methodology, Slack"
+            different platforms and monitoring of tasks through tickets. See the latest developments in my profile."
+            stacks="HubSpot, HubL, Javascript, JQuery, HTML, CSS, RESTful APIs, Figma, Scrum/Agile Methodology, Slack"
           />
 
           <Details
-            position="Intern Oujda"
-            company="ANCFCC"
-            companyLink="www.google.com"
-            time="07/2023 – 08/2023"
-            address="Boulevard Mohammed Derfoufi, Oujda"
-            work="Creation of a platform for Forest Domain Distraction, Real Estate Exchange, 
-            Private Land Acquisition using Bootstrap and PHP."
+            position="Full Stack Web Developer"
+            company="L’AQUA Store – Lidherma Store"
+            time="02/2021 – 09/2023"
+            address="CABA, Argentina"
+            work="Build a complete E-commerce platform with server integration, web performance optimization and seamless 
+             connections to payment gateways Facebook and Google Ads."
+            stacks="React, WordPress, Javascript, including DOM manipulation and object model, HTML, CSS, Photoshop, Figma, Jira, Scrum/Agile Methodology"
           />
+
           <Details
-            position="Intern Oujda"
-            company="ESTO"
-            companyLink="www.google.com"
-            time="04/2022 – 07/2022"
-            address="Al Qods University Complex, Oujda"
-            work="Processing a large medical database in Gulf countries and constructing a 
-            dashboard using machine learning, Python, PowerBI, and PowerQuery."
+            position="Front-End Web Developer | Quality Assembly Engineer"
+            company="TOYOTA Argentina SA"
+            companyLink="https://www.toyota.com.ar/"
+            time="11/2014 – 03/2022"
+            address="Buenos Aires, Argentina"
+            work="Development of App for visualization of vehicle variables. Coordinate supplies in charge. Analyze and 
+            solve problems in the production line. Analyze, document, design and manage process improvement. Implement 
+            Kaizen as a methodology for continuous improvement and detection of opportunities for change that add value 
+            to the company."
+            stacks="React, Javascript, including DOM manipulation and object model, JQuery, TypeScript, HTML, 
+            CSS, SASS, LESS, Node.js, RESTful APIs, Git/GitHub, Webpack, Figma, Scrum/Agile Methodology, Slack, Cypress"    
           />
+
           <Details
-            position="Intern Guercif"
-            company="Commune"
-            companyLink="www.google.com"
-            time="04-2021– 06/2021"
-            address="downtown, Guercif"
-            work="Creation of an intern management application using Java, Swing."
-          />
-          <Details
-            position="Intern Guercif"
-            company="Commune"
-            companyLink="www.google.com"
-            time="08-2020 – 09-2020"
-            address="downtown, Guercif"
-            work="Creation of an individual life certificate application using C#."
+            position="Quality and Project Engineer"
+            company="Pedro Bucciero Industries SRL"
+            companyLink="https://industriasbucciero.com/"
+            time="09-2009– 11/2014"
+            address="Buenos Aires, Argentina"
+            work="Responsible for Quality and Engineering in the development of more than 40 auto parts for the 
+            main automotive terminals in Argentina PSA, GM and FIAT (Application of ISO TS 16949:2009 - 
+            ISO 9001:2008 standards). Programming and tuning of CNC machines - PLCs (G&M code language)"
+            stacks="Programming and tuning of CNC machines - PLCs (G&M code language)"
           />
         </ul>
       </div>

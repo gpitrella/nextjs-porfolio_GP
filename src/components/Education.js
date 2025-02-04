@@ -7,7 +7,7 @@ const Details = ({ type, time, place, info }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%] sm:w-[90%]"
+      className="mt-6 first:mt-0 last:mb-0 w-[70%] mx-auto flex flex-col items-center justify-between md:w-[80%] sm:w-[90%]"
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -37,8 +37,8 @@ const Education = () => {
   });
 
   return (
-    <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
+    <div className="my-34">
+      <h2 className="font-bold text-5xl mb-20 w-full text-center md:text-4xl xs:text-3xl md:mb-16">
         Education
       </h2>
 
@@ -49,34 +49,40 @@ const Education = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            type="Third year of the engineering cycle."
+            type="HubSpot Architecture: Data models and APIS"
             time="2025"
-            place="ENSA Oujda"
-            info="Computer Science."
+            place="HubSpot"
+            info="Data Architecture"
           />
           <Details
-            type="Second year of engineering cycle"
+            type="Jira Specialization, Project Management"
             time="2024"
-            place="ENSA Oujda"
-            info="Computer Science."
+            place="Linkedin"
+            info="Computer Science"
           />
           <Details
-            type="Professional License Degree ESTO"
+            type="Applications Development Course"
+            time="2023"
+            place="CoderHouse"
+            info="Computer Science"
+          />
+          <Details
+            type="Full Stack Web Developer"
             time="2022"
-            place="EST Oujda"
-            info="Business Intelligence."
+            place="Henry"
+            info="Computer Science"
           />
           <Details
-            type="University Technical Diploma ESTO"
-            time="2021"
-            place="EST Oujda"
-            info="Application Developer."
+            type="Postgraduate in Industrial Automation"
+            time="2013"
+            place="University of Buenos Aires"
+            info="Industrial Automation"
           />
           <Details
-            type="High School Baccalaureate Guercif"
-            time="2019"
-            place="Hassan Dakhile Guercif"
-            info="Mathematical Science A."
+            type="Industrial Engineer"
+            time="2008"
+            place="National University of Cuyo"
+            info="Engineering"
           />
         </ul>
       </div>
