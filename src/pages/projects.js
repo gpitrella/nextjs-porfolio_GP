@@ -93,26 +93,26 @@ const projects = () => {
     return (
       <>
          <Head>
-         <title>Kaoutarlaouaj | Projects Page</title>
+         <title>Gabriel Pitrella | Projects Page</title>
          <meta name="description" content="any description" />
        </Head>
        <TransitionEffect/>
        <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
          <Layout className="pt-16">
             <AnimatedText text="Imagination Trumps Knowledge!" 
-            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+            className="mb-16 !text-5xl lg:!text-4xl sm:mb-8 sm:!text-3xl xs:!text-3xl"
             />
 
             <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
                 <div className="col-span-12">
                 <FeaturedProject 
-    title="P2E Project Management Platform"
-    img={project1}
-    summary="A modular P2E platform built with ReactJS and Spring. It includes a scheduling calendar for efficient project and candidate management."
-    link="https://github.com/HajarDobli/ElevateUMP"
-    github="https://github.com/HajarDobli/ElevateUMP"
-    type="Modular Project Management Platform"
-/>
+                    title="P2E Project Management Platform"
+                    img={project1}
+                    summary="A modular P2E platform built with ReactJS and Spring. It includes a scheduling calendar for efficient project and candidate management."
+                    link="https://github.com/HajarDobli/ElevateUMP"
+                    github="https://github.com/HajarDobli/ElevateUMP"
+                    type="Modular Project Management Platform"
+                />
 
                 </div>
                 <div className="col-span-12">

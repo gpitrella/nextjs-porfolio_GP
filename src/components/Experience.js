@@ -75,7 +75,7 @@ const Experience = () => {
           />
 
           <Details
-            position="Full Stack Web Developer"
+            position="Full Stack Developer"
             company="L’AQUA Store – Lidherma Store"
             time="02/2021 – 09/2023"
             address="CABA, Argentina"
@@ -85,7 +85,7 @@ const Experience = () => {
           />
 
           <Details
-            position="Front-End Web Developer | Quality Assembly Engineer"
+            position="Front-End Developer | Quality Assembly Engineer"
             company="TOYOTA Argentina SA"
             companyLink="https://www.toyota.com.ar/"
             time="11/2014 – 03/2022"
