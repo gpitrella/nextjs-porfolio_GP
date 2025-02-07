@@ -106,21 +106,22 @@ const projects = () => {
             <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
                 <div className="col-span-12">
                 <FeaturedProject 
-                    title="P2E Project Management Platform"
-                    img={project1}
-                    summary="A modular P2E platform built with ReactJS and Spring. It includes a scheduling calendar for efficient project and candidate management."
-                    link="https://github.com/HajarDobli/ElevateUMP"
-                    github="https://github.com/HajarDobli/ElevateUMP"
-                    type="Modular Project Management Platform"
+                    title="https://laquastore.com"
+                    img={project2}
+                    summary="This is a full Web E-commerce, you can buy any product in the store. The main used
+    technologies are: WordPress, MercadoPago, Google Ads, Google Analytics, Facebook Ads"
+                    link="https://laquastore.com"
+                    github="https://github.com/gpitrella/laqua"
+                    type="Modular Project Management"
                 />
 
                 </div>
                 <div className="col-span-12">
                 <FeaturedProject 
-    title="Development of a donation website"
-    img={project2}
-     summary="This project develops a web application for online donations, using Bootstrap for the interface and PHP for server-side operations. It ensures efficient donor management and tracking, providing a seamless donation experience while maintaining transparency and accountability."
-    link="https://github.com/Noussaiba-Zaoui/Save_Project.git"
+                    title="Development of a donation website"
+                    img={project2}
+                    summary="This project develops a web application for online donations, using Bootstrap for the interface and PHP for server-side operations. It ensures efficient donor management and tracking, providing a seamless donation experience while maintaining transparency and accountability."
+                    link="https://github.com/Noussaiba-Zaoui/Save_Project.git"
                     github="https://github.com/Noussaiba-Zaoui/Save_Project.git"
                     type="Nonprofit Donation Management Platform"
 />
