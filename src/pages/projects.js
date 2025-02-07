@@ -5,11 +5,12 @@ import Head from "next/head";
 import { GithubIcon } from "@/components/Icons";
 import Link from "next/link";
 import Image from "next/image";
-import project1 from "../../public/images/projects/captureP2E.png"
-import project2 from "../../public/images/projects/donation_picture.png"
-import project3 from "../../public/images/projects/I1.png"
-import project4 from "../../public/images/projects/Capture1.png"
-import project5 from "../../public/images/projects/three.png"
+import project1 from "../../public/images/projects/LAqua6x6.webp"
+import project2 from "../../public/images/projects/JuniorApp.png"
+import project3 from "../../public/images/projects/PorfolioGP.png"
+import project4 from "../../public/images/projects/HigherMeGP.png"
+import project5 from "../../public/images/projects/TechEcommerceGP.png"
+import project6 from "../../public/images/projects/projectsGP.png"
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 const FramerImage = motion(Image);
@@ -27,15 +28,16 @@ const FeaturedProject = ({type,title,summary,img,link,github}) => {
           className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
           >
             <FramerImage src={img} alt={title} className="w-full h-auto"
-            whileHover={{scale:1.05}}
-            transition={{duration:0.2}}
+              whileHover={{scale:1.05}}
+              transition={{duration:0.2}}
+              style={{ maxHeight: 250,  objectFit: 'cover' }}
             />
           </Link>
 
           <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
             <span className="text-primary font-medium text-xl dark:text-primaryDark lg:text-lg md:text-base">{type}</span>
             <Link href={link} target="_blank" className="hover:underline underline-offset-2">
-            <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-2xl">{title}</h2>
+            <h2 className="my-2 w-full text-left text-2xl font-bold lg:text-2xl">{title}</h2>
           </Link>
           <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">{summary}</p>
           <div className="mt-2 flex items-center">
@@ -103,13 +105,13 @@ const projects = () => {
             className="mb-16 !text-5xl lg:!text-4xl sm:mb-8 sm:!text-3xl xs:!text-3xl"
             />
 
-            <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+            <div className="grid grid-cols-12 gap-12 gap-y-12 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
                 <div className="col-span-12">
                 <FeaturedProject 
                     title="https://laquastore.com"
-                    img={project2}
+                    img={project1}
                     summary="This is a full Web E-commerce, you can buy any product in the store. The main used
-    technologies are: WordPress, MercadoPago, Google Ads, Google Analytics, Facebook Ads"
+                      technologies are: React, Javascript, HMTL, CSS, WordPress, MercadoPago, Google Ads, Google Analytics, Facebook Ads"
                     link="https://laquastore.com"
                     github="https://github.com/gpitrella/laqua"
                     type="Modular Project Management"
@@ -118,48 +120,60 @@ const projects = () => {
                 </div>
                 <div className="col-span-12">
                 <FeaturedProject 
-                    title="Development of a donation website"
+                    title="Junior"
                     img={project2}
-                    summary="This project develops a web application for online donations, using Bootstrap for the interface and PHP for server-side operations. It ensures efficient donor management and tracking, providing a seamless donation experience while maintaining transparency and accountability."
-                    link="https://github.com/Noussaiba-Zaoui/Save_Project.git"
-                    github="https://github.com/Noussaiba-Zaoui/Save_Project.git"
-                    type="Nonprofit Donation Management Platform"
-/>
+                    summary="App development to help junior programmers gain experience. The main 
+                    use technologies will be: React JS, JavaScript, Express, MongoDB, Mongoose."
+                    link="https://appjunior.vercel.app/"
+                    github="https://github.com/gpitrella/JUNIOR"
+                    type="Collaboration platform between developers"
+                />
 
                 </div>
 
                 <div className="col-span-12">
                 <FeaturedProject 
-   title="Development of a CRUD Application for Managing ENSA0 Students"
-   img={project3}
-   summary="This project develops a CRUD application for managing student information at ENSA0 using Java and JavaFX. It allows adding, viewing, updating, and deleting student records, aiming to create an efficient and user-friendly academic administration system."
-   link="https://github.com/ImeneLEG/E-SchoolEnsaO.git"
-   github="https://github.com/ImeneLEG/E-SchoolEnsaO.git"
-   type="Student Management System"
-/>
+                  title="Porfolio Gabriel Pitrella"
+                  img={project3}
+                  summary="In this App you can see everything about my studies, professional career, projects and more. The main 
+                  used technologies are: React JS, TypeScript, SASS, Lotties Integration."
+                  link="https://porfolio-gpitrella.vercel.app"
+                  github="https://github.com/gpitrella/Porfolio-GPitrella"
+                  type="Personal Porfolio Project"
+                />
 
                 </div>
 
                 <div className="col-span-12">
-                <FeaturedProject 
-                    
-                    title="Development of an E-Commerce Website for Furniture"
-                    img={project4}
-                    summary="This project aims to build a modern e-commerce website for furniture using ReactJS for the frontend, Laravel and Node.js for backend operations, and TailwindCSS for styling. Stripe API will manage secure payments, providing a smooth and secure shopping experience."
-                    link="https://github.com/Noussaiba-Zaoui/React_AKIA.git"
-                    github="https://github.com/Noussaiba-Zaoui/React_AKIA.git"
-                    type="E-Commerce Furniture Store"
+                  <FeaturedProject                     
+                      title="Our Story Page - Higherme"
+                      img={project4}
+                      summary="This project aims to create a modern business website with different sections to showcase the company's history. The main technologies used were: HubL, Javascript, Jquery, HMTL, CSS."
+                      link="https://higherme.com/our-story"
+                      github="https://higherme.com/our-story"
+                      type="Higherme Web Page"
+                  />
+                </div>
+                <div className="col-span-12">
+                  <FeaturedProject                     
+                      title="Tech E-commerce"
+                      img={project5}
+                      summary="In this App you can buy any tech product and use the App like user or admin. The main 
+                      used technologies are: React JS, Redux, SendGrid, Sequelize, Express, Postgress."
+                      link="https://techmarketfront.vercel.app"
+                      github="https://github.com/gpitrella/PF-FrontEnd"
+                      type="React JS E-commerce"
                     />
                 </div>
+
                 <div className="col-span-12">
-                <FeaturedProject 
-                    
-                    title="Development of an Android Delivery Application"
-                    img={project5}
-                    summary="This project involves creating an Android application for delivery services. The app will be developed using Java for the core functionality, SQLite for local data storage, and XML for designing the user interface. The goal is to provide an efficient and user-friendly platform for managing delivery orders and tracking shipments."
-                    link="https://github.com/ImeneLEG/FoodExpress.git"
-                    github="https://github.com/ImeneLEG/FoodExpress.git"
-                    type="Android Delivery App"
+                  <FeaturedProject                     
+                      title="https://porfolio-gpitrella.vercel.app/projects"
+                      img={project6}
+                      summary="You can see more projects in this link"
+                      link="https://porfolio-gpitrella.vercel.app/projects"
+                      github="https://github.com/gpitrella/Porfolio-GPitrella"
+                      type="React JS projects"
                     />
                 </div>
                 <div className="col-span-6 sm:col-span-12">
