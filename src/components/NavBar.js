@@ -23,8 +23,8 @@ const CustomMobileLink = ({href,title,className="",toggle}) => {
     router.push(href)
   }
  return  (
-  <button href={href} className={`${className} relative group text-light dark:text-dark my-2`} onClick={handleClick}>{title}
-   <span className={`h-[3px] inline-block bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${router.asPath == href ? 'w-full' : 'w-0'}dark:bg-dark`}>&nbsp;</span> 
+  <button href={href} className={`${className} text-3xl mb-6 relative group text-light dark:text-dark my-2`} onClick={handleClick}>{title}
+   {/* <span className={`h-[3px] inline-block bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${router.asPath == href ? 'w-full' : 'w-0'}dark:bg-dark`}>&nbsp;</span>  */}
   </button>  
  )
 }
@@ -48,11 +48,11 @@ const NavBar = () => {
           </button>
           <div className='w-full justify-between items-center lg:hidden'>
           <nav>
-            <CustomLink href="/" title="Home" className='mr-4'/> 
-            <CustomLink href="/about" title="About" className='mx-4'/> 
-            <CustomLink href="/projects" title="Projects" className='mx-4'/> 
-            <CustomLink href="/Certif" title="Certificats" className='ml-4'/> 
-            </nav> 
+            <CustomLink href="/" title="Home" className='mr-0'/> 
+            <CustomLink href="/about" title="About" className='mr-0'/> 
+            <CustomLink href="/projects" title="Projects" className='mr-0'/> 
+            <CustomLink href="/Certif" title="Certificats" className='mr-0'/> 
+          </nav> 
             <nav className="flex items-center justify-end flex-wrap">
             <motion.a href="https://github.com/gpitrella" target={"_blank"}
             className="w-6 mx-3"
@@ -85,32 +85,32 @@ const NavBar = () => {
           </div>
          
 {
-  isOpen ?  <motion.div initial={{scale:0 , opacity:0 , x:"-50%" , y:"-50%"}} animate={{scale:1 , opacity:1}} className='min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+  isOpen ?  <motion.div initial={{scale:0 , opacity:0 , x:"-50%" , y:"-50%"}} animate={{scale:1 , opacity:1}} className='w-[85%] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
   bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32
   '>
   <nav className='flex items-center flex-col justify-center'> 
-    <CustomMobileLink href="/" title="Home" className='mr-4' toggle={handleClick}/> 
+    <CustomMobileLink href="/" title="Home" className='mx-4' toggle={handleClick}/> 
     <CustomMobileLink href="/about" title="About" className='mx-4' toggle={handleClick}/> 
     <CustomMobileLink href="/projects" title="Projects" className='mx-4' toggle={handleClick}/> 
-    <CustomMobileLink href="/Certif" title="Certificats" className='ml-4' toggle={handleClick}/> 
+    <CustomMobileLink href="/Certif" title="Certificats" className='mx-4' toggle={handleClick}/> 
     </nav> 
-    <nav className="flex items-center justify-center flex-wrap mt-2">
-    <motion.a href="https://twitter.com/Kaoutar_Laouaj" target={"_blank"}
+    <nav className="flex items-center justify-center flex-wrap mt-4 gap-4">
+    {/* <motion.a href="https://twitter.com/Kaoutar_Laouaj" target={"_blank"}
     whileHover={{y:-2 }}
     whileTap={{scale:0.9}}
     className="w-6 mx-3 sm:mx-1"
     >
       <TwitterIcon />
-    </motion.a>
-    <motion.a href="https://github.com/Kaoutarlaouaj" target={"_blank"}
-    className="w-6 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1"
+    </motion.a> */}
+    <motion.a href="https://github.com/gpitrella" target={"_blank"}
+    className="w-12 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1"
     whileHover={{y:-2 }}
     whileTap={{scale:0.9}}
     >
       <GithubIcon /> 
     </motion.a>   
-    <motion.a href="https://www.linkedin.com/in/kaoutar-laouaj-14b121244/" target={"_blank"}
-    className="w-6 mx-3 sm:mx-1"
+    <motion.a href="https://www.linkedin.com/in/gabrielpitrella/" target={"_blank"}
+    className="w-12 mx-3 sm:mx-1"
     whileHover={{y:-2 }}
     whileTap={{scale:0.9}}
     >
@@ -119,7 +119,7 @@ const NavBar = () => {
 
    <button
    onClick={() => setMode(mode === "light" ? "dark" : "light")}
-   className={`ml-3 flex items-center justify-center rounded-full p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
+   className={`w-12 ml-3 flex items-center justify-center rounded-full p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
    `}
    >
 
