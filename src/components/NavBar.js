@@ -46,14 +46,14 @@ const NavBar = () => {
             <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
             <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm  ${isOpen ? '-rotate-45 -translate-y-1' :'translate-y-0.5'}`}></span>
           </button>
-          <div className='w-full justify-between items-center lg:hidden'>
-          <nav>
+          <div className='w-full flex justify-between items-center lg:hidden'>
+          <nav className='flex gap-5'>
             <CustomLink href="/" title="Home" className='mr-0'/> 
             <CustomLink href="/about" title="About" className='mr-0'/> 
             <CustomLink href="/projects" title="Projects" className='mr-0'/> 
             <CustomLink href="/Certif" title="Certificats" className='mr-0'/> 
           </nav> 
-            <nav className="flex items-center justify-end flex-wrap">
+          <nav className="flex items-center justify-end flex-wrap">
             <motion.a href="https://github.com/gpitrella" target={"_blank"}
             className="w-6 mx-3"
             whileHover={{y:-2 }}
