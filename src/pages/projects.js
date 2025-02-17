@@ -18,7 +18,7 @@ const FeaturedProject = ({type,title,summary,img,link,github}) => {
 
     return (
 
-        <article className="w-full flex items-center justify-between relative rounded-br-2xl
+        <article className="w-full flex items-center justify-between relative rounded-br-2xl max-w-7xl m-auto
         rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4
         ">
      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light
@@ -37,8 +37,8 @@ const FeaturedProject = ({type,title,summary,img,link,github}) => {
           <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
             <span className="text-primary font-medium text-xl dark:text-primaryDark lg:text-lg md:text-base">{type}</span>
             <Link href={link} target="_blank" className="hover:underline underline-offset-2">
-            <h2 className="my-2 w-full text-left text-2xl font-bold lg:text-2xl">{title}</h2>
-          </Link>
+              <h2 className="my-2 w-full text-left text-2xl font-bold lg:text-2xl md:text-base">{title}</h2>
+            </Link>
           <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">{summary}</p>
           <div className="mt-2 flex items-center">
           <Link href={github} target="_blank" className="w-10"> <GithubIcon/> </Link>
