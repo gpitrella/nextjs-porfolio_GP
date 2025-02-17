@@ -11,7 +11,7 @@ const FramerImage = motion(Image);
 const MovingImg = ({ title, img, link }) => {
   return (
     <Link href={link} target={"_blank"} download={true}>
-      <h2 className="capitalize text-xl font-semibold hover:underline">{title}</h2>
+      <h2 className="capitalize text-xl text-center font-semibold hover:underline">{title}</h2>
       <Image src={img} alt={title} className="w-96 h-auto hidden absolute rounded-lg" />
     </Link>
   );
@@ -19,7 +19,7 @@ const MovingImg = ({ title, img, link }) => {
 
 const Certificat = ({ img, title, date, link }) => {
   return (
-    <li className="relative w-full al p-4 py-6 my-2 rounded-xl flex flex-col md:flex-row items-center justify-center bg-light text-dark border border-solid border-dark border-r-4 border-b-4">
+    <li className="relative w-full al p-4 py-6 my-2 rounded-xl flex flex-col items-center justify-center bg-light text-dark border border-solid border-dark border-r-4 border-b-4">
       <MovingImg title={title} img={img} link={link} />
       <span className="text-primary font-semibold pl-4">{date}</span>
     </li>
@@ -40,7 +40,7 @@ const Certif = () => {
           text="Words Can Change The World!" 
           className="mb-2 !text-5xl lg:!text-4xl sm:!text-3xl xs:!text-2xl sm:mb-2" />
           <h2 className="font-bold text-4xl w-full text-center my-16 mt-20 dark:text-light">All Certificats</h2>
-          <ul className="grid grid-cols-3  md:grid-cols-2 lg:grid-cols-1 gap-4">
+          <ul className="grid grid-cols-3 lg:grid-cols-2  md:grid-cols-1 gap-4">
           <Certificat 
               title="HubSpot Architecture I: Data Models and APIs" 
               date="February 2025" 
