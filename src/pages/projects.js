@@ -11,6 +11,7 @@ import project3 from "../../public/images/projects/PorfolioGP.png"
 import project4 from "../../public/images/projects/HigherMeGP.png"
 import project5 from "../../public/images/projects/TechEcommerceGP.png"
 import project6 from "../../public/images/projects/projectsGP.png"
+import project7 from "../../public/images/projects/RayoLP.png"
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 const FramerImage = motion(Image);
@@ -107,6 +108,53 @@ const projects = () => {
 
             <div className="grid grid-cols-12 gap-12 gap-y-12 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
                 <div className="col-span-12">
+                  <FeaturedProject 
+                      title="Car Wash"
+                      img={project7}
+                      summary="This is a Landing Page for a project that I'm develop with other developers about car wash. The main used
+                        technologies are: NextJs, React, TypeScript, Tailwind"
+                      link="https://rayo-landing-page.vercel.app/"
+                      github="https://github.com/gpitrella/rayo-landing-page"
+                      type="Modular Project Management"
+                  />
+                </div>
+                <div className="col-span-12">
+                  <FeaturedProject 
+                      title="Junior"
+                      img={project2}
+                      summary="App development to help junior programmers gain experience. The main 
+                      use technologies will be: React JS, JavaScript, Express, MongoDB, Mongoose."
+                      link="https://appjunior.vercel.app/"
+                      github="https://github.com/gpitrella/JUNIOR"
+                      type="Collaboration platform between developers"
+                  />
+                </div>
+
+                <div className="col-span-12">
+                    <FeaturedProject 
+                      title="Porfolio Gabriel Pitrella"
+                      img={project3}
+                      summary="In this App you can see everything about my studies, professional career, projects and more. The main 
+                      used technologies are: React JS, TypeScript, SASS, Lotties Integration."
+                      link="https://porfolio-gpitrella.vercel.app"
+                      github="https://github.com/gpitrella/Porfolio-GPitrella"
+                      type="Personal Porfolio Project"
+                    />
+                </div>
+
+                <div className="col-span-12">
+                  <FeaturedProject                     
+                      title="Tech E-commerce"
+                      img={project5}
+                      summary="In this App you can buy any tech product and use the App like user or admin. The main 
+                      used technologies are: React JS, Redux, SendGrid, Sequelize, Express, Postgress."
+                      link="https://techmarketfront.vercel.app"
+                      github="https://github.com/gpitrella/PF-FrontEnd"
+                      type="React JS E-commerce"
+                    />
+                </div>
+
+                <div className="col-span-12">
                 <FeaturedProject 
                     title="https://laquastore.com"
                     img={project1}
@@ -116,32 +164,6 @@ const projects = () => {
                     github="https://github.com/gpitrella/laqua"
                     type="Modular Project Management"
                 />
-
-                </div>
-                <div className="col-span-12">
-                <FeaturedProject 
-                    title="Junior"
-                    img={project2}
-                    summary="App development to help junior programmers gain experience. The main 
-                    use technologies will be: React JS, JavaScript, Express, MongoDB, Mongoose."
-                    link="https://appjunior.vercel.app/"
-                    github="https://github.com/gpitrella/JUNIOR"
-                    type="Collaboration platform between developers"
-                />
-
-                </div>
-
-                <div className="col-span-12">
-                <FeaturedProject 
-                  title="Porfolio Gabriel Pitrella"
-                  img={project3}
-                  summary="In this App you can see everything about my studies, professional career, projects and more. The main 
-                  used technologies are: React JS, TypeScript, SASS, Lotties Integration."
-                  link="https://porfolio-gpitrella.vercel.app"
-                  github="https://github.com/gpitrella/Porfolio-GPitrella"
-                  type="Personal Porfolio Project"
-                />
-
                 </div>
 
                 <div className="col-span-12">
@@ -153,17 +175,6 @@ const projects = () => {
                       github="https://higherme.com/our-story"
                       type="Higherme Web Page"
                   />
-                </div>
-                <div className="col-span-12">
-                  <FeaturedProject                     
-                      title="Tech E-commerce"
-                      img={project5}
-                      summary="In this App you can buy any tech product and use the App like user or admin. The main 
-                      used technologies are: React JS, Redux, SendGrid, Sequelize, Express, Postgress."
-                      link="https://techmarketfront.vercel.app"
-                      github="https://github.com/gpitrella/PF-FrontEnd"
-                      type="React JS E-commerce"
-                    />
                 </div>
 
                 <div className="col-span-12">
