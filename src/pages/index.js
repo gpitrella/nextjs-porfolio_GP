@@ -43,7 +43,7 @@ export default function Home() {
                 text="Developing Solutions"
                 className='!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl'
               />
-              <p className='my-4 text-base font-medium dark:text-light md:text-sm sm:text-xs'>
+              <p className='my-4 text-base font-medium dark:text-light md:text-base sm:text-base'>
                 Software Engineer Full Stack with over 4 years of hands-on expertise in crafting and implementing 
                 efficient solutions using diverse technologies, including JavaScript, TypeScript, NodeJS, ReactJS, 
                 Express, PostgreSQL, MongoDB and more.
