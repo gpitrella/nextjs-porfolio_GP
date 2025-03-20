@@ -59,7 +59,7 @@ const about = () => {
                 including JavaScript, HuBL(HubSpot), NodeJS, ReactJS, Express, PostgreSQL, MongoDB and more.                 
               </p>
               <p className="my-4 font-medium">
-                My professional journey spans over 14 years as an Industrial Engineer with 7 years as an 
+                I prioritize KISS, DRY and SOLID principles for robust and maintainable software. My professional journey spans over 14 years as an Industrial Engineer with 7 years as an 
                 Engineer at Toyota, where I developed a strong foundation in analytical thinking, 
                 effective problem-solving, teamwork, communication, and a commitment to continuous improvement.
               </p>
