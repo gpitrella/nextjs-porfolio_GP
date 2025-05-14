@@ -113,7 +113,7 @@ const projects = () => {
                       img={project7}
                       summary="This is a Landing Page for a project that I'm develop with other developers about car wash. The main used
                         technologies are: NextJs, React, TypeScript, Tailwind"
-                      link="https://rayo-landing-page.vercel.app/"
+                      link="https://rayolavados.com"
                       github="https://github.com/gpitrella/rayo-landing-page"
                       type="Modular Project Management"
                   />
