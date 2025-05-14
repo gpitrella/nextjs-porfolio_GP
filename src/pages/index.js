@@ -46,7 +46,7 @@ export default function Home() {
               <p className='my-4 text-base font-medium dark:text-light md:text-base sm:text-base'>
                    Full Stack Engineer with over 4 years of hands-on expertise in crafting and implementing efficient 
                    solutions using a diverse set of technologies, including JavaScript, HuBL(HubSpot), NodeJS, ReactJS, 
-                   NodeJS and more. I prioritize KISS, DRY and SOLID principles for robust and maintainable software. 
+                   NextJS and more. I prioritize KISS, DRY and SOLID principles for robust and maintainable software. 
                    My professional journey spans over 14 years as an Industrial Engineer with 7 years as an Engineer at 
                    Toyota, where I developed a strong foundation in analytical thinking, effective problem-solving, 
                    teamwork, communication, and a commitment to continuous improvement.
