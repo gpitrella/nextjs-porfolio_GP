@@ -3,7 +3,8 @@ import '@/styles/globals.css'
 import { Montserrat } from "next/font/google"
 import Head from 'next/head';
 import Footer from '@/components/Footer';
-import { GoogleAnalytics } from "@next/third-parties/google";
+// import { GoogleAnalytics } from "@next/third-parties/google";
+import GoogleAnalytics from "@/components/GoogleAnalytics"; 
 
 const montserrat = Montserrat(
   {
@@ -34,7 +35,7 @@ export default function App({ Component, pageProps }) {
                 {/* <!-- Open Graph (para redes sociales) --> */}
                 <meta property="og:title" content="Gabriel | Full Stack Developer & Engineer"/>
                 <meta property="og:description" content="Explore my portfolio of web development and advanced technological solutions."/>
-                {/* <meta property="og:image" content="https://tuportafolio.com/imagen.jpg"/> */}
+                {/* <meta property="og:image" content="https://tuportafolio.com/imagG-ZFZE480F9Sen.jpg"/> */}
                 <meta property="og:url" content="https://tuportafolio.com"/>
                 <meta property="og:type" content="website"/>
 
@@ -43,7 +44,7 @@ export default function App({ Component, pageProps }) {
                 <meta name="twitter:description" content="Explora mi portafolio con proyectos de desarrollo web, optimización y tecnología."/>
 
                 <link rel="icon" href="/favicon.ico" />
-                <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""} />
+                <GoogleAnalytics />
             </Head>
               <main className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}>
               <NavBar />
