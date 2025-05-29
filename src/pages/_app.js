@@ -26,12 +26,11 @@ export default function App({ Component, pageProps }) {
 
   return ( 
         <>
+            <Script
+              strategy="afterInteractive"
+              src="https://www.googletagmanager.com/gtag/js?id=G-ZFZE480F9S"
+            />
             <Head>
-                <Script
-                  strategy="afterInteractive"
-                  src="https://www.googletagmanager.com/gtag/js?id=G-ZFZE480F9S"
-                />
-
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta charset="UTF-8"/>
                 <title>Gabriel Pitrella | Engineer Full Stack Developer </title>
@@ -57,6 +56,7 @@ export default function App({ Component, pageProps }) {
                 <meta name="twitter:description" content="Explora mi portafolio con proyectos de desarrollo web, optimización y tecnología."/>
 
                 <link rel="icon" href="/favicon.ico" />
+  
             </Head>
               <main className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}>
               <NavBar />
