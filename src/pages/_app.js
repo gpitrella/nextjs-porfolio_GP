@@ -1,9 +1,10 @@
 import NavBar from '@/components/NavBar';
-import '@/styles/globals.css'
-import { Montserrat } from "next/font/google"
+import { useEffect } from 'react';
+import '@/styles/globals.css';
+import Script from "next/script";
+import { Montserrat } from "next/font/google";
 import Head from 'next/head';
 import Footer from '@/components/Footer';
-import GoogleAnalytics from "@/components/GoogleAnalytics"; 
 
 const montserrat = Montserrat(
   {
@@ -14,10 +15,23 @@ const montserrat = Montserrat(
 
 export default function App({ Component, pageProps }) {
 
-  return (
- 
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-ZFZE480F9S");
+  }, []);
+
+  return ( 
         <>
             <Head>
+                <Script
+                  strategy="afterInteractive"
+                  src="https://www.googletagmanager.com/gtag/js?id=G-ZFZE480F9S"
+                />
+
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta charset="UTF-8"/>
                 <title>Gabriel Pitrella | Engineer Full Stack Developer </title>
