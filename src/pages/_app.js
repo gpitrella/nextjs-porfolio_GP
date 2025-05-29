@@ -3,7 +3,6 @@ import '@/styles/globals.css'
 import { Montserrat } from "next/font/google"
 import Head from 'next/head';
 import Footer from '@/components/Footer';
-// import { GoogleAnalytics } from "@next/third-parties/google";
 import GoogleAnalytics from "@/components/GoogleAnalytics"; 
 
 const montserrat = Montserrat(
