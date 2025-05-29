@@ -57,7 +57,6 @@ export default function App({ Component, pageProps }) {
                 <meta name="twitter:description" content="Explora mi portafolio con proyectos de desarrollo web, optimización y tecnología."/>
 
                 <link rel="icon" href="/favicon.ico" />
-                <GoogleAnalytics />
             </Head>
               <main className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}>
               <NavBar />
