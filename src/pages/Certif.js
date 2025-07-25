@@ -41,7 +41,12 @@ const Certif = () => {
           className="mb-2 !text-5xl lg:!text-4xl sm:!text-3xl xs:!text-2xl sm:mb-2" />
           <h2 className="font-bold text-4xl w-full text-center my-16 mt-20 dark:text-light">All Certificats</h2>
           <ul className="grid grid-cols-3 lg:grid-cols-2  md:grid-cols-1 gap-4">
-          <Certificat 
+            <Certificat 
+              title="Advanced JavaScript" 
+              date="June 2025" 
+              link="https://udemy-certificate.s3.amazonaws.com/pdf/UC-2ef04873-b3a5-43b0-a3f6-7229d11ec37f.pdf" 
+            />
+            <Certificat 
               title="HubSpot Architecture I: Data Models and APIs" 
               date="February 2025" 
               link="https://app.hubspot.com/academy/achievements/0qq2q9wg/en/1/gabriel-pitrella/hubspot-architecture-i-data-models-and-apis" 
