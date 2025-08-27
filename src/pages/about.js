@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import Head from "next/head";
 import AnimatedText from "@/components/AnimtedText";
 import Layout from "@/components/Layout";
@@ -9,6 +9,7 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import TransitionEffect from "@/components/TransitionEffect";
+import { mainName } from "@/components/GlobalContext";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -35,6 +36,8 @@ const AnimatedNumbers = ({ value }) => {
 };
 
 const about = () => {
+  const name = useContext(mainName);
+
   return (
     <>
       <Head>
@@ -54,7 +57,7 @@ const about = () => {
                 Biography
               </h2>
               <p className="font-medium">
-                Hi, I&apos;m Gabriel Pitrella, a Software Engineer Full Stack with over 4 years of hands-on 
+                Hi, I&apos;m {name}, a Software Engineer Full Stack with over 4 years of hands-on 
                 expertise in crafting and implementing efficient solutions using a diverse set of technologies, 
                 including JavaScript, HuBL(HubSpot), NodeJS, ReactJS, NextJs, Express, PostgreSQL, MongoDB and more.                 
               </p>
