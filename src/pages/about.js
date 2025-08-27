@@ -9,7 +9,7 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import TransitionEffect from "@/components/TransitionEffect";
-import { mainName } from "@/components/GlobalContext";
+import { MainName } from "@/components/GlobalContext";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -36,7 +36,7 @@ const AnimatedNumbers = ({ value }) => {
 };
 
 const about = () => {
-  const name = useContext(mainName);
+  const name = useContext(MainName);
 
   return (
     <>
