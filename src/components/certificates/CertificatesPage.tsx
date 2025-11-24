@@ -1,6 +1,6 @@
 'use client';
 
-import AnimatedText from "@/components/AnimtedText";
+import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import TransitionEffect from "@/components/TransitionEffect";
 import {

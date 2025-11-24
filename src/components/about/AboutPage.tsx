@@ -1,6 +1,6 @@
 'use client';
 
-import AnimatedText from "@/components/AnimtedText";
+import AnimatedText from "@/components/AnimatedText";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Layout from "@/components/Layout";

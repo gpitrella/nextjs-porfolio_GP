@@ -1,6 +1,8 @@
 import "@/styles/globals.css";
 import AppNavBar from "@/components/AppNavBar";
 import Footer from "@/components/Footer";
+import ErrorBoundary from "@/components/ErrorBoundary";
+import ThemeScript from "@/components/ThemeScript";
 import { Montserrat } from "next/font/google";
 import Script from "next/script";
 import type { Metadata } from "next";
@@ -24,7 +26,10 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
+      <head>
+        <ThemeScript />
+      </head>
       <body className={`${montserrat.variable} font-mont bg-light dark:bg-dark`}>
         <Script
           strategy="afterInteractive"
@@ -42,11 +47,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
             `,
           }}
         />
-        <main className="min-h-screen">
-          <AppNavBar />
-          {children}
-          <Footer />
-        </main>
+        <ErrorBoundary>
+          <main className="min-h-screen">
+            <AppNavBar />
+            {children}
+            <Footer />
+          </main>
+        </ErrorBoundary>
       </body>
     </html>
   );
