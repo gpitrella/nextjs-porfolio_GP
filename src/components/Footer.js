@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useContext } from "react";
 import Layout from "./Layout";
 import Link from "next/link";

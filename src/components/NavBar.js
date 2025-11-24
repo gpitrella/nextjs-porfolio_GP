@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
@@ -51,7 +53,7 @@ const NavBar = () => {
             <CustomLink href="/" title="Home" className='mr-0'/> 
             <CustomLink href="/about" title="About" className='mr-0'/> 
             <CustomLink href="/projects" title="Projects" className='mr-0'/> 
-            <CustomLink href="/Certif" title="Certificats" className='mr-0'/> 
+            <CustomLink href="/certifications" title="Certifications" className='mr-0'/> 
           </nav> 
           <nav className="flex items-center justify-end flex-wrap">
             <motion.a href="https://github.com/gpitrella" target={"_blank"}
@@ -92,7 +94,7 @@ const NavBar = () => {
     <CustomMobileLink href="/" title="Home" className='mx-4' toggle={handleClick}/> 
     <CustomMobileLink href="/about" title="About" className='mx-4' toggle={handleClick}/> 
     <CustomMobileLink href="/projects" title="Projects" className='mx-4' toggle={handleClick}/> 
-    <CustomMobileLink href="/Certif" title="Certificats" className='mx-4' toggle={handleClick}/> 
+    <CustomMobileLink href="/certifications" title="Certifications" className='mx-4' toggle={handleClick}/> 
     </nav> 
     <nav className="flex items-center justify-center flex-wrap mt-4 gap-4">
     {/* <motion.a href="https://twitter.com/Kaoutar_Laouaj" target={"_blank"}

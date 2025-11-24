@@ -68,10 +68,12 @@ const Experience = () => {
             companyLink="https://www.hubsnacks.com/"
             time="06/2022 – Current"
             address="London"
-            work="Creation of web pages and landing pages, monitoring of web development according to design, 
-            optimization of websites, troubleshooting of client websites, integration of websites with 
-            different platforms and monitoring of tasks through tickets. See the latest developments in my profile."
-            stacks="HubSpot, HubL, Javascript, JQuery, HTML, CSS, RESTful APIs, Figma, Scrum/Agile Methodology, Slack"
+            work="Creation of high-performance websites and landing pages, implementation of scalable frontend architectures, 
+            and end-to-end monitoring of web development aligned with design and UX requirements. Responsibilities include 
+            site optimization, debugging and resolving complex client-side issues, integrating web properties with external 
+            platforms and APIs, and managing development workflows through ticketing systems. 
+            Strong experience embedding React components inside HubSpot (React-in-HubSpot) to extend CMS capabilities, 
+            build dynamic modules, and create reusable UI features integrated with HubL and HubSpot’s serverless functions."            stacks="HubSpot CMS, HubL, React, React embedded in HubSpot, JavaScript, TypeScript, jQuery, HTML, CSS, Next.js, RESTful APIs, Figma, Scrum / Agile, Slack"
           />
 
           <Details

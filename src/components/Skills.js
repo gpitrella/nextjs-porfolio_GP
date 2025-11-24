@@ -30,13 +30,11 @@ const Skills = () => {
         Skills
       </h2>
       <div className="w-full flex flex-wrap gap-3 justify-center">
-        {skills.map((name)=>{
-          return (
-            <div onClick={skillsCounter2}>
-              <Skill name={name} />
-            </div>
-          )
-        })}        
+        {skills.map((name) => (
+          <div key={name} onClick={skillsCounter2}>
+            <Skill name={name} />
+          </div>
+        ))}
       </div>      
     </>
   );
