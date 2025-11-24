@@ -1,44 +1,150 @@
-# Next.Js Website Tutorial: Create a Stunning Portfolio Website with Nextjs, Tailwind CSS and Framer-motion
+# Portfolio - Gabriel Pitrella
 
-![GitHub stars](https://img.shields.io/github/stars/codebucks27/Next.js-Developer-Portfolio-Starter-Code?style=social&logo=ApacheSpark&label=Stars)&nbsp;&nbsp;
-![GitHub forks](https://img.shields.io/github/forks/codebucks27/Next.js-Developer-Portfolio-Starter-Code?style=social&logo=KashFlow&maxAge=3600)&nbsp;&nbsp;
-![Github Followers](https://img.shields.io/github/followers/codebucks27.svg?style=social&label=Follow)&nbsp;&nbsp;<br />
+Portfolio profesional construido con Next.js 13+ (App Router), TypeScript, React Query, y TailwindCSS.
 
-This repository contains starter code for Portfolio website created using NextJs. <br />
+## 🚀 Características
 
-For Demo and Final Code checkout following link👇: <br />
-[Nextjs Portfolio Website](https://devdreaming.com//videos/nextjs-tutorial-build-portfolio-tailwind-css-framer-motion#code-links) <br />
+- **Next.js 13+ App Router** - Arquitectura moderna con Server/Client Components
+- **TypeScript** - Type safety completo
+- **React Query** - Gestión de estado asíncrono
+- **TailwindCSS + shadcn/ui** - Estilos utility-first y componentes reutilizables
+- **Feature-based Architecture** - Organización modular por features
+- **Error Boundaries** - Manejo robusto de errores
+- **Testing** - Jest + React Testing Library
+- **Accesibilidad** - WCAG compliant
 
-If you want to learn how to create it please follow below tutorial👇: <br />
-https://youtu.be/Yw7yWHigGKI <br />
-[![YouTube Video Views](https://img.shields.io/youtube/views/Yw7yWHigGKI?style=social)](https://youtu.be/Yw7yWHigGKI)<br />
+## 📁 Estructura del Proyecto
 
-### Images of The Portfolio Website:
+```
+src/
+├── app/                    # App Router (Next.js 13+)
+│   ├── layout.tsx         # Root layout con Error Boundary
+│   ├── page.tsx           # Home page
+│   ├── about/             # About page
+│   ├── projects/          # Projects page
+│   ├── certifications/    # Certifications page
+│   └── api/               # API routes
+├── components/            # Componentes React
+│   ├── ui/               # Componentes UI base (shadcn)
+│   ├── __tests__/        # Tests unitarios
+│   └── ...
+├── lib/
+│   ├── components/       # Biblioteca de componentes compartidos
+│   ├── features/         # Feature modules
+│   │   ├── projects/
+│   │   ├── profile/
+│   │   ├── certificates/
+│   │   ├── experience/
+│   │   └── education/
+│   └── utils/            # Utilidades
+└── styles/               # Estilos globales
+```
 
-![Nextjs Portfolio Website](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/home-light-desktop.png)
-![Nextjs Portfolio Website Dark Mode](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/home-dark-desktop.png)
-![Next.js Portfolio Website](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/about-light-desktop.png)
-![Next js Portfolio Website](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/projects-dark-desktop.png)
-![Portfolio Website In Next.js](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/articles-light-desktop.png)
-![Responsive Portfolio Website In Nextjs](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/about-light-mobile.png)
-![Responsive Portfolio Website In Next js](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/projects-light-mobile.png)
-![Mobile Responsive Portfolio Website In Next.js](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/articles-light-mobile.png)
+## 🛠️ Scripts Disponibles
 
+```bash
+# Desarrollo
+npm run dev
 
-### Resources Used in This Project
+# Build de producción
+npm run build
 
-- Profile image in the home page created by using https://www.midjourney.com/ tool.
-- Profile image in the about page by [Albert Dera](https://unsplash.com/@albertdera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 
-on [Unsplash](https://unsplash.com/photos/ILip77SbmOE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).
-- Fonts from https://fonts.google.com/ <br />
+# Iniciar servidor de producción
+npm start
 
-- Icons from https://iconify.design/ <br />
+# Linting
+npm run lint
 
-- LightBulb Svg from https://lukaszadam.com/illustrations <br />
+# Tests
+npm test
+npm run test:watch
+npm run test:coverage
+```
 
-### External Libraries used in this project:
+## 🧪 Testing
 
-- [framer-motion](https://www.framer.com/motion/) <br />
-- [Tailwind css](https://tailwindcss.com/) <br />
+El proyecto incluye configuración de Jest y React Testing Library. Los tests se encuentran en `src/components/__tests__/`.
 
+```bash
+# Ejecutar todos los tests
+npm test
 
+# Modo watch
+npm run test:watch
+
+# Con coverage
+npm run test:coverage
+```
+
+## 🏗️ Arquitectura de Features
+
+Cada feature sigue esta estructura:
+
+```
+lib/features/<featureName>/
+├── index.ts              # Exports públicos
+├── types.ts              # TypeScript types
+├── keys.ts               # React Query keys
+├── data.ts               # Datos estáticos (si aplica)
+├── adapters/             # Adaptadores de datos
+└── scopes/
+    ├── me/
+    │   ├── api.ts        # API calls
+    │   ├── hooks.ts      # React Query hooks
+    │   └── selectors.ts  # Selectores de datos
+    ├── accelerator/
+    └── admin/
+```
+
+## 🎨 Componentes Compartidos
+
+Los componentes reutilizables están disponibles en `lib/components/index.ts`:
+
+```typescript
+import { Button, Card, Layout, ErrorBoundary } from '@/lib/components';
+```
+
+## 🚨 Error Boundaries
+
+El proyecto incluye Error Boundaries para manejo robusto de errores. El ErrorBoundary principal está en el root layout.
+
+## 📝 Convenciones
+
+- **TypeScript**: Todos los componentes deben estar tipados
+- **Client Components**: Marcar con `'use client'` cuando sea necesario
+- **Server Components**: Por defecto en App Router
+- **Naming**: PascalCase para componentes, camelCase para funciones
+- **Imports**: Usar alias `@/` para imports absolutos
+
+## 🔧 Configuración
+
+### Variables de Entorno
+
+Crea un archivo `.env.local`:
+
+```env
+# Agregar variables de entorno según sea necesario
+```
+
+### TypeScript
+
+El proyecto usa TypeScript estricto. Configuración en `tsconfig.json`.
+
+## 📚 Recursos
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [React Query](https://tanstack.com/query/latest)
+- [TailwindCSS](https://tailwindcss.com/docs)
+- [shadcn/ui](https://ui.shadcn.com/)
+
+## 🤝 Contribuir
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto es privado y propiedad de Gabriel Pitrella.
