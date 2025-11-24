@@ -6,8 +6,6 @@ import Experience from "@/components/Experience";
 import Layout from "@/components/Layout";
 import Skills from "@/components/Skills";
 import TransitionEffect from "@/components/TransitionEffect";
-import profilePic from "@/../public/images/profile/laouaj-kaoutar.jpg";
-import Image from "next/image";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { useContext, useEffect, useRef, RefObject } from "react";
 import { MainName } from "@/components/GlobalContext";
@@ -85,18 +83,6 @@ const AboutPage = () => {
                   </h2>
                 </div>
               ))}
-            </div>
-
-            <div className="col-span-1 hidden items-center justify-center md:order-1 md:col-span-8 md:flex">
-              <div className="relative h-64 w-64 overflow-hidden rounded-3xl border border-dark/10 dark:border-light/20">
-                <Image
-                  src={profilePic}
-                  alt={name}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 80vw, 25vw"
-                />
-              </div>
             </div>
           </div>
           <Skills />
