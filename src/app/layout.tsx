@@ -15,9 +15,32 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gabrielpitrella.com"),
   title: "Gabriel Pitrella | Ingeniero Full Stack",
   description:
     "Portafolio y proyectos destacados de Gabriel Pitrella, ingeniero full stack especializado en Next.js, React y arquitecturas escalables.",
+  openGraph: {
+    title: "Gabriel Pitrella | Full Stack Engineer",
+    description: "Specialized in Next.js, React, and scalable architectures",
+    url: "https://gabrielpitrella.com",
+    siteName: "Gabriel Pitrella Portfolio",
+    images: [
+      {
+        url: "/images/profile/gabriel-pitrella.png",
+        width: 1200,
+        height: 630,
+        alt: "Gabriel Pitrella - Full Stack Engineer",
+      },
+    ],
+    locale: "es_AR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gabriel Pitrella | Full Stack Engineer",
+    description: "Specialized in Next.js, React, and scalable architectures",
+    images: ["/images/profile/gabriel-pitrella.png"],
+  },
 };
 
 interface RootLayoutProps {
@@ -45,6 +68,23 @@ export default function RootLayout({ children }: RootLayoutProps) {
               gtag('js', new Date());
               gtag('config', 'G-ZFZE480F9S');
             `,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Gabriel Pitrella",
+              jobTitle: "Full Stack Engineer",
+              url: "https://gabrielpitrella.com",
+              sameAs: [
+                "https://github.com/gabrielpitrella",
+                "https://linkedin.com/in/gabrielpitrella",
+              ],
+              knowsAbout: ["Next.js", "React", "TypeScript", "HubSpot CMS"],
+            }),
           }}
         />
         <ErrorBoundary>

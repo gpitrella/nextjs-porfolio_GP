@@ -17,8 +17,7 @@ const Footer: React.FC<FooterProps> = ({ name = "Gabriel Pitrella" }) => {
       <Layout className="py-8 flex items-center justify-between lg:flex-col lg:py-6">
         <span>{currentYear} &copy; All Rights Reserved.</span>
         <div className="flex items-center lg:py-2">
-          Build With <span className="text-primary dark:text-primaryDark text-2xl px-1" aria-label="love">&#9825;</span>
-          by&nbsp;
+          Built by&nbsp;
           <Link
             href="https://github.com/gpitrella"
             className="underline underline-offset-2"
