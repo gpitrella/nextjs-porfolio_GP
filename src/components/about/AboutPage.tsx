@@ -53,7 +53,7 @@ const AboutPage = () => {
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16 sm:pt-12 xs:pt-8">
           <AnimatedText
-            text="Passion Fuels Purpose!"
+            text="Full Stack Engineer | HubSpot Specialist"
             className="mb-16 !text-5xl lg:!text-4xl sm:!text-3xl xs:!text-2xl sm:mb-8"
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">

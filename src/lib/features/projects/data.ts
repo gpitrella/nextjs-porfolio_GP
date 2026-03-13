@@ -11,8 +11,8 @@ import { ProjectRecord } from "./types";
 export const PROJECTS_DATA: ProjectRecord[] = [
   {
     id: "brodeur-development",
-    slug: "brodeurd-development",
-    title: "Brodeurd Development",
+    slug: "brodeur-development",
+    title: "Brodeur Development",
     summary:
       "Corporate website with bespoke HubSpot CMS modules, culture highlights, and applicant funnels.",
     description:
