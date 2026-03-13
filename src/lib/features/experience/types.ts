@@ -5,8 +5,8 @@ export interface ExperienceItem {
   companyLink?: string;
   time: string;
   address: string;
-  work: string;
-  stacks: string;
+  work: string | string[]; // Support both string and array for backward compatibility
+  stacks: string | string[]; // Support both string and array for backward compatibility
   scope: "me" | "accelerator" | "admin";
 }
 

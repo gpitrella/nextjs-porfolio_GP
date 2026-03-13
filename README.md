@@ -148,3 +148,29 @@ El proyecto usa TypeScript estricto. Configuración en `tsconfig.json`.
 ## 📄 Licencia
 
 Este proyecto es privado y propiedad de Gabriel Pitrella.
+
+## Architecture Decision Records
+
+### ADR-001: Next.js App Router
+**Status**: Accepted
+**Context**: Need modern routing with server components support
+**Decision**: Use Next.js 13+ App Router instead of Pages Router
+**Consequences**: Better performance with RSC, simpler data fetching
+
+### ADR-002: Feature-Based Architecture
+**Status**: Accepted
+**Context**: Need scalable code organization
+**Decision**: Organize code by feature in lib/features/*
+**Consequences**: Better modularity, easier to locate related code
+
+### ADR-003: TailwindCSS for Styling
+**Status**: Accepted
+**Context**: Need consistent, maintainable styling approach
+**Decision**: Use TailwindCSS with custom configuration
+**Consequences**: Faster development, smaller bundle size
+
+### ADR-004: React Query for Data Fetching
+**Status**: Accepted
+**Context**: Need efficient data fetching with SSR support
+**Decision**: Use @tanstack/react-query for data management
+**Consequences**: Better caching, automatic refetching, SSR support
