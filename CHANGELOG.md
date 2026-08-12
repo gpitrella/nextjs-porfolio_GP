@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.1...v1.2.2) (2026-08-12)
+
+
+### 🐛 Bug Fixes
+
+* tune max_tokens so chat responses finish within the timeout ([3d39e13](https://github.com/gpitrella/nextjs-porfolio_GP/commit/3d39e13d858f777ef997c8408d985171ddf9efe6))
+
 ## [1.2.1](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.0...v1.2.1) (2026-08-12)
 
 
