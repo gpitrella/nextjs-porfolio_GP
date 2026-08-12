@@ -1,6 +1,9 @@
 'use client';
 
 import Image from "next/image";
+import Link from "next/link";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import profilePic from "@/../public/images/profile/gabriel-pitrella.png";
 
 export interface ChatMessageData {
@@ -12,6 +15,30 @@ export interface ChatMessageData {
 interface ChatMessageProps {
   message: ChatMessageData;
 }
+
+const markdownComponents = {
+  p: ({ children }: { children?: React.ReactNode }) => <p className="mb-2 last:mb-0">{children}</p>,
+  strong: ({ children }: { children?: React.ReactNode }) => <strong className="font-semibold">{children}</strong>,
+  ul: ({ children }: { children?: React.ReactNode }) => <ul className="mb-2 list-disc space-y-1 pl-5 last:mb-0">{children}</ul>,
+  ol: ({ children }: { children?: React.ReactNode }) => <ol className="mb-2 list-decimal space-y-1 pl-5 last:mb-0">{children}</ol>,
+  li: ({ children }: { children?: React.ReactNode }) => <li>{children}</li>,
+  h1: ({ children }: { children?: React.ReactNode }) => <p className="mb-1 font-semibold">{children}</p>,
+  h2: ({ children }: { children?: React.ReactNode }) => <p className="mb-1 font-semibold">{children}</p>,
+  h3: ({ children }: { children?: React.ReactNode }) => <p className="mb-1 font-semibold">{children}</p>,
+  code: ({ children }: { children?: React.ReactNode }) => (
+    <code className="rounded bg-dark/10 px-1 py-0.5 text-xs dark:bg-light/20">{children}</code>
+  ),
+  a: ({ href, children }: { href?: string; children?: React.ReactNode }) => (
+    <Link
+      href={href ?? "#"}
+      target="_blank"
+      rel="noreferrer noopener"
+      className="underline underline-offset-2 hover:opacity-80"
+    >
+      {children}
+    </Link>
+  ),
+};
 
 const ChatMessage = ({ message }: ChatMessageProps) => {
   const isUser = message.role === "user";
@@ -26,13 +53,19 @@ const ChatMessage = ({ message }: ChatMessageProps) => {
         />
       )}
       <div
-        className={`max-w-[75%] whitespace-pre-wrap rounded-2xl px-4 py-3 text-sm leading-relaxed ${
+        className={`max-w-[75%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
           isUser
-            ? "bg-dark text-light dark:bg-light dark:text-dark"
+            ? "whitespace-pre-wrap bg-dark text-light dark:bg-light dark:text-dark"
             : "bg-dark/5 dark:bg-light/10"
         }`}
       >
-        {message.content}
+        {isUser ? (
+          message.content
+        ) : (
+          <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+            {message.content}
+          </ReactMarkdown>
+        )}
       </div>
     </div>
   );
