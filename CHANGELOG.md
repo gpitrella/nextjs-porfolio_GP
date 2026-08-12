@@ -1,3 +1,15 @@
+## [1.2.0](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.1.0...v1.2.0) (2026-08-12)
+
+
+### ✨ Features
+
+* add EN/ES language toggle for the portfolio UI ([7c89d87](https://github.com/gpitrella/nextjs-porfolio_GP/commit/7c89d87892121b74417c1036672dc40a5c17394f))
+
+
+### 🐛 Bug Fixes
+
+* stop chat responses from truncating and improve tone ([1dcc0ad](https://github.com/gpitrella/nextjs-porfolio_GP/commit/1dcc0ad79475e44f2dbc0af3aa99832a114711ea))
+
 ## [1.1.0](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.0.0...v1.1.0) (2026-08-12)
 
 
