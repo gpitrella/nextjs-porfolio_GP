@@ -38,7 +38,7 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         model,
         messages: [
-          { role: "system", content: buildSystemPrompt() },
+          { role: "system", content: `detailed thinking off\n\n${buildSystemPrompt()}` },
           { role: "user", content: message },
         ],
         stream: true,
