@@ -1,6 +1,7 @@
 import { buildSystemPrompt } from "@/lib/features/agent/systemPrompt";
 
 export const runtime = "nodejs";
+export const maxDuration = 60;
 
 interface ChatRequestBody {
   message: string;
