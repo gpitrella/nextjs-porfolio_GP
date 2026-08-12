@@ -6,8 +6,8 @@ import ChatMessage, { ChatMessageData } from "./ChatMessage";
 import WelcomeMessage from "./WelcomeMessage";
 import SuggestedPrompts from "./SuggestedPrompts";
 import ChatInput from "./ChatInput";
-
-const ERROR_REPLY = "Uy, tuve un problema para responder. Probá de nuevo en un momento.";
+import { useLocale } from "./LocaleProvider";
+import { UI_TEXT } from "./uiText";
 
 let messageCounter = 0;
 const nextMessageId = () => `msg-${++messageCounter}`;
@@ -18,6 +18,8 @@ const ChatPanel = () => {
   const [messages, setMessages] = useState<ChatMessageData[]>([]);
   const [loading, setLoading] = useState(false);
   const handledAskRef = useRef<string | null>(null);
+  const [locale] = useLocale();
+  const errorReply = UI_TEXT[locale].errorReply;
 
   const askAgent = async (question: string) => {
     setMessages((prev) => [...prev, { id: nextMessageId(), role: "user", content: question }]);
@@ -49,7 +51,7 @@ const ChatPanel = () => {
         setMessages((prev) => prev.map((m) => (m.id === assistantId ? { ...m, content: accumulated } : m)));
       }
     } catch (error) {
-      setMessages((prev) => prev.map((m) => (m.id === assistantId ? { ...m, content: ERROR_REPLY } : m)));
+      setMessages((prev) => prev.map((m) => (m.id === assistantId ? { ...m, content: errorReply } : m)));
     } finally {
       setLoading(false);
     }

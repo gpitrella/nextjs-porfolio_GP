@@ -2,6 +2,8 @@
 
 import { FormEvent, useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { useLocale } from "./LocaleProvider";
+import { UI_TEXT } from "./uiText";
 
 interface ChatInputProps {
   onSend: (text: string) => void;
@@ -10,6 +12,8 @@ interface ChatInputProps {
 
 const ChatInput = ({ onSend, disabled }: ChatInputProps) => {
   const [value, setValue] = useState("");
+  const [locale] = useLocale();
+  const t = UI_TEXT[locale];
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
@@ -25,15 +29,15 @@ const ChatInput = ({ onSend, disabled }: ChatInputProps) => {
         type="text"
         value={value}
         onChange={(event) => setValue(event.target.value)}
-        placeholder="Escribí tu pregunta sobre Gabriel..."
+        placeholder={t.inputPlaceholder}
         disabled={disabled}
-        aria-label="Escribir mensaje"
+        aria-label={t.inputAria}
         className="flex-1 rounded-full border border-dark/10 bg-light px-4 py-2 text-sm outline-none transition-colors focus:border-dark/30 disabled:opacity-60 dark:border-light/10 dark:bg-dark dark:focus:border-light/30"
       />
       <button
         type="submit"
         disabled={disabled || !value.trim()}
-        aria-label="Enviar"
+        aria-label={t.sendAria}
         className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-dark text-light transition-opacity disabled:opacity-40 dark:bg-light dark:text-dark"
       >
         <ArrowRight className="h-4 w-4" />

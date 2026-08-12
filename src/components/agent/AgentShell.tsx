@@ -4,14 +4,18 @@ import { ReactNode, useState } from "react";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import AgentSidebar from "./AgentSidebar";
+import { LocaleProvider, useLocale } from "./LocaleProvider";
+import { UI_TEXT } from "./uiText";
 
 interface AgentShellProps {
   children: ReactNode;
 }
 
-const AgentShell = ({ children }: AgentShellProps) => {
+const AgentShellInner = ({ children }: AgentShellProps) => {
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [locale] = useLocale();
+  const t = UI_TEXT[locale];
 
   return (
     <div className="flex h-screen w-full overflow-hidden bg-light text-dark dark:bg-dark dark:text-light">
@@ -27,7 +31,7 @@ const AgentShell = ({ children }: AgentShellProps) => {
           <button
             type="button"
             onClick={() => setMobileOpen(true)}
-            aria-label="Abrir menú"
+            aria-label={t.openMenuAria}
             className="flex h-8 w-8 items-center justify-center rounded-md hover:bg-dark/5 dark:hover:bg-light/10"
           >
             <Menu className="h-5 w-5" />
@@ -42,5 +46,11 @@ const AgentShell = ({ children }: AgentShellProps) => {
     </div>
   );
 };
+
+const AgentShell = ({ children }: AgentShellProps) => (
+  <LocaleProvider>
+    <AgentShellInner>{children}</AgentShellInner>
+  </LocaleProvider>
+);
 
 export default AgentShell;
