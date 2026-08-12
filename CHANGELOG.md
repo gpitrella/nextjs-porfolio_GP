@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.2...v1.2.3) (2026-08-12)
+
+
+### ⚡ Performance Improvements
+
+* disable Nemotron's extended reasoning to speed up chat replies ([213dcc9](https://github.com/gpitrella/nextjs-porfolio_GP/commit/213dcc94011fd06eaf07b3fb4b73c6871bb83a43))
+
 ## [1.2.2](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.1...v1.2.2) (2026-08-12)
 
 
