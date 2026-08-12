@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.0...v1.2.1) (2026-08-12)
+
+
+### 🐛 Bug Fixes
+
+* extend chat API route timeout to stop mid-stream cutoffs ([32c5e6a](https://github.com/gpitrella/nextjs-porfolio_GP/commit/32c5e6a109d9e2da3efc0df0b94d58e3c20c640a))
+
 ## [1.2.0](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.1.0...v1.2.0) (2026-08-12)
 
 
