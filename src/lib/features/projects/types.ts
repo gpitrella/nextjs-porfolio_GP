@@ -12,7 +12,7 @@ export interface ProjectRecord {
   projectType: string;
   liveUrl: string;
   repoUrl: string;
-  heroImage: StaticImageData;
+  heroImage?: StaticImageData;
   technologies: string[];
   scope: ProjectAudience;
   featured: boolean;

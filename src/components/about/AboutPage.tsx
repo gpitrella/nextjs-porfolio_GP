@@ -11,6 +11,7 @@ import { useContext, useEffect, useRef, RefObject } from "react";
 import { MainName } from "@/components/GlobalContext";
 import {
   selectBiography,
+  selectHero,
   selectMetrics,
 } from "@/lib/features/profile/scopes/me/selectors";
 import { useProfile } from "@/lib/features/profile/scopes/me/hooks";
@@ -44,6 +45,7 @@ const AnimatedNumbers = ({ value }: { value: number }) => {
 const AboutPage = () => {
   const name = useContext(MainName);
   const { data } = useProfile();
+  const hero = selectHero(data);
   const biography = selectBiography(data);
   const metrics = selectMetrics(data);
 
@@ -53,7 +55,7 @@ const AboutPage = () => {
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16 sm:pt-12 xs:pt-8">
           <AnimatedText
-            text="Full Stack Engineer | HubSpot Specialist"
+            text={hero?.subtitle ?? ""}
             className="mb-16 !text-5xl lg:!text-4xl sm:!text-3xl xs:!text-2xl sm:mb-8"
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">

@@ -1,6 +1,5 @@
 import "@/styles/globals.css";
-import AppNavBar from "@/components/AppNavBar";
-import Footer from "@/components/Footer";
+import AgentShell from "@/components/agent/AgentShell";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import ThemeScript from "@/components/ThemeScript";
 import { Montserrat } from "next/font/google";
@@ -88,11 +87,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           }}
         />
         <ErrorBoundary>
-          <main className="min-h-screen">
-            <AppNavBar />
-            {children}
-            <Footer />
-          </main>
+          <AgentShell>{children}</AgentShell>
         </ErrorBoundary>
       </body>
     </html>

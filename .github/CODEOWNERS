@@ -1,0 +1,11 @@
+# Code Owners for Portfolio Repository
+# These owners will be automatically requested for review when someone opens a pull request
+
+# Default owner for everything in the repo
+* @gpitrella
+
+# Specific ownership for different areas
+/src/components/ @gpitrella
+/src/lib/features/ @gpitrella
+/.github/ @gpitrella
+/src/__tests__/ @gpitrella

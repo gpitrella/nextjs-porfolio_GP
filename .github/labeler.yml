@@ -1,0 +1,32 @@
+documentation:
+  - '**/*.md'
+  - 'docs/**/*'
+
+dependencies:
+  - 'package.json'
+  - 'package-lock.json'
+
+tests:
+  - 'src/**/*.test.ts'
+  - 'src/**/*.test.tsx'
+  - 'src/__tests__/**/*'
+
+ci/cd:
+  - '.github/**/*'
+
+configuration:
+  - '*.config.js'
+  - '*.config.ts'
+  - '.eslintrc*'
+  - '.prettierrc*'
+  - 'tsconfig.json'
+
+components:
+  - 'src/components/**/*'
+
+features:
+  - 'src/lib/features/**/*'
+
+styles:
+  - '**/*.css'
+  - 'src/styles/**/*'

@@ -4,30 +4,29 @@ export const PROFILE_DATA: ProfileData = {
   id: "gabriel-pitrella-profile",
   scope: "me",
   hero: {
-    title: "Developing Solutions",
-    subtitle: "Software Engineer Full Stack",
+    title: "Building AI-native products",
+    subtitle: "Senior Software Engineer · AI & Agent Systems · Product-Minded",
     tagline: "Imagination meets execution",
     summary:
-      "Full Stack Engineer with 5 years building efficient solutions across JavaScript, HubSpot, Node.js, React, and Next.js. Passionate about KISS, DRY, and SOLID for long-term maintainability.",
-    cvUrl:
-      "https://res.cloudinary.com/djgghmpgh/image/upload/v1739020709/rnrqqgz1xvbc8s0lj6ce.pdf",
+      "Senior Software Engineer with 5+ years building production systems across HubSpot CRM ecosystems, AI/agent infrastructure, and cloud-native platforms, backed by a 14-year engineering career (including 7 years at Toyota). Creator of Memxus, an open-source remote MCP server giving Claude, ChatGPT, and Cursor a shared, persistent memory layer — taken from idea to launch across three marketplaces. Comfortable owning systems end-to-end, from architecture and authentication to deployment and product strategy.",
+    cvUrl: "/Gabriel_Pitrella_Resume_July_2026.pdf",
     contactEmail: "gabrielpitrella@gmail.com",
   },
   biography: {
     paragraphs: [
-      "Hi, I'm Gabriel Pitrella, a Full Stack Software Engineer with five years building reliable and scalable web experiences. I've reduced page load time by 40% across 20+ HubSpot CMS sites, built and deployed 15+ production applications serving 100K+ monthly users, and implemented CI/CD pipelines reducing deployment time by 60% using JavaScript, HubSpot, Node.js, React, Next.js, and supporting technologies such as Express, PostgreSQL, and MongoDB.",
-      "I prioritize clean architecture and maintainability by applying SOLID, DRY, and KISS every day. Before tech, I spent 14 years in Industrial Engineering, including seven years at Toyota honing analytical thinking, continuous improvement, and team leadership.",
+      "Hi, I'm Gabriel Pitrella. I build production systems across HubSpot CRM integrations, AI/agent infrastructure, and cloud-native platforms — hands-on with the MCP protocol, OAuth 2.1, OpenAI embeddings, vector search, and serverless REST APIs. I created Memxus, an open-source remote MCP server that gives Claude, ChatGPT, and Cursor a shared, authenticated, persistent memory layer, submitted to the Anthropic Claude Connectors Directory, Slack App Marketplace, and Cursor Marketplace.",
+      "Beyond the code, I've defined product strategy from scratch: identifying the need, shaping the value proposition, prioritizing the roadmap, and making go-to-market decisions for Memxus across three distribution channels. Before software, I spent 14 years in Industrial Engineering, including seven years at Toyota coordinating suppliers and production quality under a Kaizen continuous-improvement mindset — the same systems-thinking and quality discipline I bring to shipping software today.",
     ],
   },
   highlights: [
-    "Full Stack Engineer with expertise in HubSpot, Next.js, and Node.js.",
-    "Industrial Engineer background with Toyota experience.",
-    "Focus on composable architectures and accessible UI.",
+    "Senior Software Engineer specialized in HubSpot CRM, AI/agent infrastructure, and MCP.",
+    "Creator of Memxus — an open-source remote MCP server launched across 3 marketplaces.",
+    "14-year engineering career, including 7 years at Toyota, blending product thinking with technical depth.",
   ],
   metrics: [
     { id: "certificates", label: "Professional Certifications", value: 10, suffix: "" },
-    { id: "projects", label: "Full-Stack Projects completed", value: 8, suffix: "+" },
-    { id: "experience", label: "Years of experience", value: 5, suffix: "" },
+    { id: "projects", label: "Full-Stack Projects completed", value: 10, suffix: "+" },
+    { id: "experience", label: "Years in software engineering", value: 5, suffix: "+" },
   ],
 };
 
