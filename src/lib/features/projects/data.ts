@@ -176,5 +176,35 @@ export const PROJECTS_DATA: ProjectRecord[] = [
     featured: true,
     badges: ["Open Source", "Security", "In development"],
   },
+  {
+    id: "memxus-cursor-plugin",
+    slug: "memxus-cursor-plugin",
+    title: "Memxus Cursor Plugin",
+    summary: "Companion plugin that connects the Cursor IDE to Memxus's shared memory layer.",
+    description:
+      "Editor integration extending Memxus's multi-client memory model (Claude, ChatGPT, Cursor) directly into the Cursor IDE workflow.",
+    projectType: "IDE Integration",
+    liveUrl: "https://github.com/gpitrella/memxus-cursor-plugin",
+    repoUrl: "https://github.com/gpitrella/memxus-cursor-plugin",
+    technologies: ["JavaScript", "Cursor", "MCP Protocol"],
+    scope: "me",
+    featured: false,
+    badges: ["Open Source"],
+  },
+  {
+    id: "pi-videogames",
+    slug: "pi-videogames",
+    title: "PI-VideoGames",
+    summary: "Full-stack video game search and management app.",
+    description:
+      "MERN-style app for browsing and managing a video game catalog, with server-side filtering and a relational data layer via Sequelize.",
+    projectType: "Full-Stack App",
+    liveUrl: "https://github.com/gpitrella/PI-VideoGames",
+    repoUrl: "https://github.com/gpitrella/PI-VideoGames",
+    technologies: ["React", "Redux", "Node.js", "Express", "Sequelize"],
+    scope: "me",
+    featured: false,
+    badges: ["Bootcamp"],
+  },
 ];
 

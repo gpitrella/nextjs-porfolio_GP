@@ -42,6 +42,7 @@ export async function POST(request: Request) {
         ],
         stream: true,
         temperature: 0.4,
+        max_tokens: 2048,
       }),
     });
   } catch (error) {

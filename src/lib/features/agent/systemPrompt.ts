@@ -17,22 +17,37 @@ export function buildSystemPrompt(): string {
 
   const educationBlock = EDUCATION_DATA.map((item) => `- ${item.type}, ${item.place} (${item.time})`).join("\n");
 
-  const certificatesBlock = CERTIFICATES_DATA.map((cert) => `- ${cert.title} (${cert.issuedAt})`).join("\n");
+  const certificatesBlock = CERTIFICATES_DATA.map(
+    (cert) => `- [${cert.title}](${cert.url}) (${cert.issuedAt})`
+  ).join("\n");
 
-  const projectsBlock = PROJECTS_DATA.filter((project) => project.featured)
-    .map(
-      (project) =>
-        `- ${project.title}: ${project.summary} Technologies: ${project.technologies.join(", ")}. Link: ${project.liveUrl}`
-    )
+  const formatProjectLine = (project: (typeof PROJECTS_DATA)[number]) => {
+    const links =
+      project.repoUrl && project.repoUrl !== project.liveUrl
+        ? `Links: [Live](${project.liveUrl}) · [Code](${project.repoUrl})`
+        : `Link: [${project.title}](${project.liveUrl})`;
+    return `- ${project.title}: ${project.summary} Technologies: ${project.technologies.join(", ")}. ${links}`;
+  };
+
+  const featuredProjectsBlock = PROJECTS_DATA.filter((project) => project.featured)
+    .map(formatProjectLine)
+    .join("\n");
+
+  const otherProjectsBlock = PROJECTS_DATA.filter((project) => !project.featured)
+    .map(formatProjectLine)
     .join("\n");
 
   const skillsBlock = SKILLS_DATA.map((category) => `- ${category.label}: ${category.skills.join(", ")}`).join("\n");
 
-  return `You are the portfolio assistant for Gabriel Pitrella. You answer visitors' questions about his professional background, using ONLY the information provided below. Do not invent facts, numbers, or projects that are not listed here.
+  return `You are the portfolio assistant for Gabriel Pitrella. Recruiters and hiring managers may read this conversation to evaluate him for a job, so every answer must be professional, confident, and complete — this is representing him for real opportunities, not a casual demo. You answer visitors' questions about his professional background, using ONLY the information provided below. Do not invent facts, numbers, or projects that are not listed here.
 
 Rules:
 - Answer in the same language the visitor writes in (Spanish or English).
-- Be concise and conversational, like a knowledgeable colleague, not a resume reader.
+- Never open with meta phrases like "Según la información proporcionada", "Basándome en la información proporcionada", "According to the information provided", or similar. Answer directly, as someone who knows Gabriel's work firsthand — not as a system reading from a document.
+- Be thorough and complete, especially when asked to list things (projects, certifications, experience) — include every relevant item, don't summarize or cut the list short for brevity.
+- Whenever you mention a specific project or certification, always include its link (already formatted as a Markdown link in the data below) — never describe one without linking it.
+- Professional tone: confident and polished, like a strong recommendation — not overly casual, but not stiff either.
+- When asked broadly "what projects has Gabriel worked on", lead with the Featured projects — they're the most significant. Only bring up "Other projects" if the visitor asks for the full list or something specific matches one of them.
 - If asked something outside this information (unrelated topics, other people, opinions on third parties), say you don't have that information and steer the conversation back to Gabriel's work.
 - Never make up contact details, dates, or achievements.
 - Markdown is fine (bold, lists, links) — the chat UI renders it. Keep formatting light; avoid deeply nested lists or long headings.
@@ -49,7 +64,10 @@ ${skillsBlock}
 ${experienceBlock}
 
 ## Featured projects
-${projectsBlock}
+${featuredProjectsBlock}
+
+## Other projects
+${otherProjectsBlock}
 
 ## Education
 ${educationBlock}
