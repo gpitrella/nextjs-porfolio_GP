@@ -40,15 +40,21 @@ export const FeaturedProjectCard = ({
         className="group block w-full rounded-3xl"
         aria-label={project.accessibilityLabel}
       >
-        <MotionImage
-          src={project.heroImage}
-          alt={project.title}
-          className="h-72 w-full rounded-3xl object-cover shadow-2xl"
-          sizes="(max-width: 1024px) 100vw, 60vw"
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.25 }}
-          priority={project.featured}
-        />
+        {project.heroImage ? (
+          <MotionImage
+            src={project.heroImage}
+            alt={project.title}
+            className="h-72 w-full rounded-3xl object-cover shadow-2xl"
+            sizes="(max-width: 1024px) 100vw, 60vw"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.25 }}
+            priority={project.featured}
+          />
+        ) : (
+          <div className="flex h-72 w-full items-center justify-center rounded-3xl bg-dark/5 shadow-2xl dark:bg-light/10">
+            <GithubIcon className="h-16 w-16 text-dark/40 dark:text-light/50" />
+          </div>
+        )}
       </Link>
 
       <CardContent className="flex flex-1 flex-col p-0">

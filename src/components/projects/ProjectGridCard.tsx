@@ -29,14 +29,20 @@ export const ProjectGridCard = ({ project }: ProjectGridCardProps) => {
         aria-label={project.accessibilityLabel}
         className="block overflow-hidden rounded-2xl"
       >
-        <MotionImage
-          src={project.heroImage}
-          alt={project.title}
-          className="h-56 w-full rounded-2xl object-cover"
-          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-          whileHover={{ scale: 1.03 }}
-          transition={{ duration: 0.2 }}
-        />
+        {project.heroImage ? (
+          <MotionImage
+            src={project.heroImage}
+            alt={project.title}
+            className="h-56 w-full rounded-2xl object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+            whileHover={{ scale: 1.03 }}
+            transition={{ duration: 0.2 }}
+          />
+        ) : (
+          <div className="flex h-56 w-full items-center justify-center rounded-2xl bg-dark/5 dark:bg-light/10">
+            <GithubIcon className="h-12 w-12 text-dark/40 dark:text-light/50" />
+          </div>
+        )}
       </Link>
       <CardHeader className="px-0">
         <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-primary dark:text-primaryDark">
