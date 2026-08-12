@@ -34,3 +34,6 @@ yarn-error.log*
 
 # worktrees
 .worktrees
+
+# typescript build cache
+*.tsbuildinfo
