@@ -18,7 +18,7 @@ const AgentShellInner = ({ children }: AgentShellProps) => {
   const t = UI_TEXT[locale];
 
   return (
-    <div className="flex h-screen w-full overflow-hidden bg-light text-dark dark:bg-dark dark:text-light">
+    <div className="flex h-dvh w-full overflow-hidden bg-light text-dark dark:bg-dark dark:text-light">
       <AgentSidebar
         collapsed={collapsed}
         onToggleCollapse={() => setCollapsed((prev) => !prev)}
