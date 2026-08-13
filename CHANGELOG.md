@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.3...v1.2.4) (2026-08-13)
+
+
+### 🐛 Bug Fixes
+
+* use dvh instead of vh for the shell height on mobile ([267b9fa](https://github.com/gpitrella/nextjs-porfolio_GP/commit/267b9fae0b632d062416a16f45d0230940ddc426))
+
 ## [1.2.3](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.2...v1.2.3) (2026-08-12)
 
 
