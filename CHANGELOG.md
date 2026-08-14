@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.4...v1.2.5) (2026-08-14)
+
+
+### ⚡ Performance Improvements
+
+* switch chat backend from NVIDIA NIM to Groq ([30f9652](https://github.com/gpitrella/nextjs-porfolio_GP/commit/30f96525760470e7023e33ebf6c508e5e46dd1fc))
+
 ## [1.2.4](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.3...v1.2.4) (2026-08-13)
 
 
