@@ -7,14 +7,14 @@ interface ChatRequestBody {
   message: string;
 }
 
-const NVIDIA_CHAT_URL = "https://integrate.api.nvidia.com/v1/chat/completions";
-const DEFAULT_MODEL = "nvidia/llama-3.3-nemotron-super-49b-v1";
+const GROQ_CHAT_URL = "https://api.groq.com/openai/v1/chat/completions";
+const DEFAULT_MODEL = "llama-3.3-70b-versatile";
 
 export async function POST(request: Request) {
-  const apiKey = process.env.NVIDIA_API_KEY;
+  const apiKey = process.env.GROQ_API_KEY;
 
   if (!apiKey) {
-    return new Response("El servidor no tiene configurada NVIDIA_API_KEY.", { status: 500 });
+    return new Response("El servidor no tiene configurada GROQ_API_KEY.", { status: 500 });
   }
 
   const body = (await request.json()) as ChatRequestBody;
@@ -24,11 +24,11 @@ export async function POST(request: Request) {
     return new Response("Falta el mensaje.", { status: 400 });
   }
 
-  const model = process.env.NVIDIA_MODEL || DEFAULT_MODEL;
+  const model = process.env.GROQ_MODEL || DEFAULT_MODEL;
 
   let upstream: Response;
   try {
-    upstream = await fetch(NVIDIA_CHAT_URL, {
+    upstream = await fetch(GROQ_CHAT_URL, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -38,22 +38,22 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         model,
         messages: [
-          { role: "system", content: `detailed thinking off\n\n${buildSystemPrompt()}` },
+          { role: "system", content: buildSystemPrompt() },
           { role: "user", content: message },
         ],
         stream: true,
         temperature: 0.4,
-        max_tokens: 900,
+        max_tokens: 1536,
       }),
     });
   } catch (error) {
-    console.error("NVIDIA NIM fetch error:", error);
+    console.error("Groq fetch error:", error);
     return new Response("No se pudo contactar al modelo. Probá de nuevo en un momento.", { status: 502 });
   }
 
   if (!upstream.ok || !upstream.body) {
     const detail = await upstream.text().catch(() => "");
-    console.error("NVIDIA NIM error response:", upstream.status, detail);
+    console.error("Groq error response:", upstream.status, detail);
     return new Response("No se pudo contactar al modelo. Probá de nuevo en un momento.", { status: 502 });
   }
 
