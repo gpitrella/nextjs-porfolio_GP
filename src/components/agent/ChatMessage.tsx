@@ -28,6 +28,17 @@ const markdownComponents = {
   code: ({ children }: { children?: React.ReactNode }) => (
     <code className="rounded bg-dark/10 px-1 py-0.5 text-xs dark:bg-light/20">{children}</code>
   ),
+  table: ({ children }: { children?: React.ReactNode }) => (
+    <div className="mb-2 overflow-x-auto last:mb-0">
+      <table className="border-collapse text-xs">{children}</table>
+    </div>
+  ),
+  th: ({ children }: { children?: React.ReactNode }) => (
+    <th className="border border-dark/10 px-2 py-1 text-left font-semibold dark:border-light/10">{children}</th>
+  ),
+  td: ({ children }: { children?: React.ReactNode }) => (
+    <td className="border border-dark/10 px-2 py-1 align-top dark:border-light/10">{children}</td>
+  ),
   a: ({ href, children }: { href?: string; children?: React.ReactNode }) => (
     <Link
       href={href ?? "#"}
