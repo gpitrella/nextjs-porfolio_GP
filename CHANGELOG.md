@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.5...v1.2.6) (2026-08-17)
+
+
+### 🐛 Bug Fixes
+
+* switch Groq model to gpt-oss-20b and cap hallucinated inferences ([171b99f](https://github.com/gpitrella/nextjs-porfolio_GP/commit/171b99fcea4424b3cc60327fba3749406eaf646f))
+
 ## [1.2.5](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.4...v1.2.5) (2026-08-14)
 
 
