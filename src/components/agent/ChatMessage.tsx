@@ -61,10 +61,16 @@ const ChatMessage = ({ message }: ChatMessageProps) => {
       >
         {isUser ? (
           message.content
-        ) : (
+        ) : message.content ? (
           <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
             {message.content}
           </ReactMarkdown>
+        ) : (
+          <div className="flex items-center gap-1 py-1" aria-label="Thinking">
+            <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-dark/40 [animation-delay:-0.3s] dark:bg-light/40" />
+            <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-dark/40 [animation-delay:-0.15s] dark:bg-light/40" />
+            <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-dark/40 dark:bg-light/40" />
+          </div>
         )}
       </div>
     </div>
