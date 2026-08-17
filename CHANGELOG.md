@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.3.0...v1.3.1) (2026-08-17)
+
+
+### 🐛 Bug Fixes
+
+* offer degree/cert docs on request instead of publishing scans ([4b5c31f](https://github.com/gpitrella/nextjs-porfolio_GP/commit/4b5c31f5f66cf6469c4131799a00265aad780d09))
+
 ## [1.3.0](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.8...v1.3.0) (2026-08-17)
 
 
