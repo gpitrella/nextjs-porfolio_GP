@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.4.0...v1.4.1) (2026-08-17)
+
+
+### 🐛 Bug Fixes
+
+* forbid markdown tables/raw HTML in chat replies, style them as fallback ([cf09ca1](https://github.com/gpitrella/nextjs-porfolio_GP/commit/cf09ca11a4270a94fd2a541c7c9a280951ef4c1b))
+
 ## [1.4.0](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.3.1...v1.4.0) (2026-08-17)
 
 
