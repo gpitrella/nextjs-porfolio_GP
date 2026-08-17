@@ -1,3 +1,10 @@
+## [1.4.0](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.3.1...v1.4.0) (2026-08-17)
+
+
+### ✨ Features
+
+* show a typing indicator while waiting for the first token ([4c807c0](https://github.com/gpitrella/nextjs-porfolio_GP/commit/4c807c05b1849e9058f8752b822e8422e10d2c90))
+
 ## [1.3.1](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.3.0...v1.3.1) (2026-08-17)
 
 
