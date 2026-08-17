@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.6...v1.2.7) (2026-08-17)
+
+
+### 🐛 Bug Fixes
+
+* retry once on Groq 429 instead of failing the whole request ([8a3340f](https://github.com/gpitrella/nextjs-porfolio_GP/commit/8a3340fd7f891cdeaf0eeb580478bff4d41c9e57))
+
 ## [1.2.6](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.5...v1.2.6) (2026-08-17)
 
 
