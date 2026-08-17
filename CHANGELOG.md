@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.8...v1.3.0) (2026-08-17)
+
+
+### ✨ Features
+
+* auto-scroll chat, keep suggested prompts always visible ([a79b81e](https://github.com/gpitrella/nextjs-porfolio_GP/commit/a79b81e2f6b6bc030b4d4f56012032f90a21143b))
+
 ## [1.2.8](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.7...v1.2.8) (2026-08-17)
 
 
