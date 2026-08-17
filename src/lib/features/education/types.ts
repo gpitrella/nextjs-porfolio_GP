@@ -4,6 +4,7 @@ export interface EducationItem {
   time: string;
   place: string;
   info: string;
+  url?: string;
   scope: "me" | "accelerator" | "admin";
 }
 

@@ -15,7 +15,11 @@ export function buildSystemPrompt(): string {
       `- ${job.position} at ${job.company} (${job.time}): ${formatList(job.work)}. Stack: ${formatList(job.stacks)}`
   ).join("\n");
 
-  const educationBlock = EDUCATION_DATA.map((item) => `- ${item.type}, ${item.place} (${item.time})`).join("\n");
+  const educationBlock = EDUCATION_DATA.map((item) =>
+    item.url
+      ? `- [${item.type}](${item.url}), ${item.place} (${item.time})`
+      : `- ${item.type}, ${item.place} (${item.time})`
+  ).join("\n");
 
   const certificatesBlock = CERTIFICATES_DATA.map(
     (cert) => `- [${cert.title}](${cert.url}) (${cert.issuedAt})`
@@ -46,7 +50,7 @@ Reply in the visitor's language (detect each message, don't default to Spanish j
 Rules:
 - No meta openers ("Según la información proporcionada", "According to the information provided") — answer directly, like someone who knows his work firsthand.
 - Be thorough on list questions (projects, certs, experience) — full list, no trimming for brevity.
-- Always link projects/certifications you mention (Markdown links already in the data).
+- Always link projects/certifications/degrees you mention when a link exists in the data (already formatted as Markdown links) — it adds credibility, so never skip it.
 - Confident, polished tone — not stiff, not overly casual.
 - "What projects" → lead with Featured; only mention Other projects if asked for the full list or something specific matches.
 - Off-topic (unrelated topics, other people, third-party opinions) → say you don't have that info, redirect to Gabriel's work.

@@ -20,6 +20,11 @@ const ChatPanel = () => {
   const handledAskRef = useRef<string | null>(null);
   const [locale] = useLocale();
   const errorReply = UI_TEXT[locale].errorReply;
+  const scrollAnchorRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    scrollAnchorRef.current?.scrollIntoView({ block: "end" });
+  }, [messages]);
 
   const askAgent = async (question: string) => {
     setMessages((prev) => [...prev, { id: nextMessageId(), role: "user", content: question }]);
@@ -74,9 +79,10 @@ const ChatPanel = () => {
         {messages.map((message) => (
           <ChatMessage key={message.id} message={message} />
         ))}
+        <div ref={scrollAnchorRef} />
       </div>
 
-      {messages.length === 0 && <SuggestedPrompts onSelect={askAgent} disabled={loading} />}
+      <SuggestedPrompts onSelect={askAgent} disabled={loading} />
       <ChatInput onSend={askAgent} disabled={loading} />
     </div>
   );
