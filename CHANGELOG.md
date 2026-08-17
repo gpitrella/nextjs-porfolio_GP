@@ -1,3 +1,10 @@
+## [1.2.8](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.7...v1.2.8) (2026-08-17)
+
+
+### 🐛 Bug Fixes
+
+* trim system prompt and retune retry to fit the free-tier token budget ([d8679b7](https://github.com/gpitrella/nextjs-porfolio_GP/commit/d8679b767137a5fb370d0fefc7abadf7357c3621))
+
 ## [1.2.7](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.2.6...v1.2.7) (2026-08-17)
 
 
