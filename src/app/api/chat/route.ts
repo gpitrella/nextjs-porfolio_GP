@@ -8,7 +8,7 @@ interface ChatRequestBody {
 }
 
 const GROQ_CHAT_URL = "https://api.groq.com/openai/v1/chat/completions";
-const DEFAULT_MODEL = "llama-3.3-70b-versatile";
+const DEFAULT_MODEL = "openai/gpt-oss-20b";
 
 export async function POST(request: Request) {
   const apiKey = process.env.GROQ_API_KEY;
@@ -43,7 +43,7 @@ export async function POST(request: Request) {
         ],
         stream: true,
         temperature: 0.4,
-        max_tokens: 1536,
+        max_tokens: 1000,
       }),
     });
   } catch (error) {
