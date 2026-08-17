@@ -25,35 +25,53 @@ export async function POST(request: Request) {
   }
 
   const model = process.env.GROQ_MODEL || DEFAULT_MODEL;
+  const requestBody = JSON.stringify({
+    model,
+    messages: [
+      { role: "system", content: buildSystemPrompt() },
+      { role: "user", content: message },
+    ],
+    stream: true,
+    temperature: 0.4,
+    max_tokens: 1000,
+  });
 
-  let upstream: Response;
+  const maxRetries = 2;
+  let upstream: Response | null = null;
+
   try {
-    upstream = await fetch(GROQ_CHAT_URL, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-        Accept: "text/event-stream",
-      },
-      body: JSON.stringify({
-        model,
-        messages: [
-          { role: "system", content: buildSystemPrompt() },
-          { role: "user", content: message },
-        ],
-        stream: true,
-        temperature: 0.4,
-        max_tokens: 1000,
-      }),
-    });
+    for (let attempt = 0; attempt <= maxRetries; attempt++) {
+      const response = await fetch(GROQ_CHAT_URL, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+          Accept: "text/event-stream",
+        },
+        body: requestBody,
+      });
+
+      if (response.status !== 429 || attempt === maxRetries) {
+        upstream = response;
+        break;
+      }
+
+      // Free tier hit its per-minute token budget — this clears quickly, so wait and retry
+      // instead of surfacing a hard error for what's usually a transient condition.
+      const detail = await response.clone().text().catch(() => "");
+      console.error("Groq rate limited, retrying:", detail);
+      const match = detail.match(/try again in ([\d.]+)s/i);
+      const waitMs = match ? Math.ceil(parseFloat(match[1]) * 1000) + 250 : 2000 * (attempt + 1);
+      await new Promise((resolve) => setTimeout(resolve, Math.min(waitMs, 15000)));
+    }
   } catch (error) {
     console.error("Groq fetch error:", error);
     return new Response("No se pudo contactar al modelo. Probá de nuevo en un momento.", { status: 502 });
   }
 
-  if (!upstream.ok || !upstream.body) {
-    const detail = await upstream.text().catch(() => "");
-    console.error("Groq error response:", upstream.status, detail);
+  if (!upstream || !upstream.ok || !upstream.body) {
+    const detail = await upstream?.text().catch(() => "");
+    console.error("Groq error response:", upstream?.status, detail);
     return new Response("No se pudo contactar al modelo. Probá de nuevo en un momento.", { status: 502 });
   }
 
