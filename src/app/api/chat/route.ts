@@ -33,10 +33,10 @@ export async function POST(request: Request) {
     ],
     stream: true,
     temperature: 0.4,
-    max_tokens: 1000,
+    max_tokens: 800,
   });
 
-  const maxRetries = 2;
+  const maxRetries = 1;
   let upstream: Response | null = null;
 
   try {
@@ -62,7 +62,7 @@ export async function POST(request: Request) {
       console.error("Groq rate limited, retrying:", detail);
       const match = detail.match(/try again in ([\d.]+)s/i);
       const waitMs = match ? Math.ceil(parseFloat(match[1]) * 1000) + 250 : 2000 * (attempt + 1);
-      await new Promise((resolve) => setTimeout(resolve, Math.min(waitMs, 15000)));
+      await new Promise((resolve) => setTimeout(resolve, Math.min(waitMs, 45000)));
     }
   } catch (error) {
     console.error("Groq fetch error:", error);
