@@ -11,8 +11,8 @@ export const CERTIFICATES_DATA: CertificateRecord[] = [
   {
     id: "hubspot-architecture",
     title: "HubSpot Architecture I: Data Models and APIs",
-    issuedAt: "February 2025",
-    url: "https://app.hubspot.com/academy/achievements/0qq2q9wg/en/1/gabriel-pitrella/hubspot-architecture-i-data-models-and-apis",
+    issuedAt: "August 2026",
+    url: "https://app.hubspot.com/academy/achievements/0qq2q9wg/en/1/gabriel-pitrella/hubspot-architecture-i-data-models-and-apis-certified",
     scope: "me",
   },
   {
@@ -32,7 +32,7 @@ export const CERTIFICATES_DATA: CertificateRecord[] = [
   {
     id: "data-integrations-certification",
     title: "Data Integrations Certification",
-    issuedAt: "July 2024",
+    issuedAt: "July 2026",
     url: "https://app.hubspot.com/academy/achievements/k4kfy2sf/en/1/gabriel-pitrella/data-integrations-certification",
     scope: "me",
   },
