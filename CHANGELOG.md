@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.4.1...v1.4.2) (2026-08-21)
+
+
+### 🐛 Bug Fixes
+
+* update HubSpot certification links and renewal dates ([7fbdb2b](https://github.com/gpitrella/nextjs-porfolio_GP/commit/7fbdb2bf7d8c118fd2fabb42896f4a72fff79acb))
+
 ## [1.4.1](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.4.0...v1.4.1) (2026-08-17)
 
 
