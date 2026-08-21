@@ -31,6 +31,7 @@ export const EDUCATION_DATA: EducationRecord[] = [
     time: "2022",
     place: "Henry",
     info: "Computer Science",
+    url: "/diplomas/henry-fullstack-diploma.pdf",
     scope: "me",
   },
   {
