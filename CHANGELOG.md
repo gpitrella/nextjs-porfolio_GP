@@ -1,3 +1,10 @@
+## [1.5.0](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.4.2...v1.5.0) (2026-08-21)
+
+
+### ✨ Features
+
+* link the real Henry Full Stack diploma from the education entry ([b3480a8](https://github.com/gpitrella/nextjs-porfolio_GP/commit/b3480a8a8f8d1be9e998b2c0fa6d1b2f560b7473))
+
 ## [1.4.2](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.4.1...v1.4.2) (2026-08-21)
 
 
