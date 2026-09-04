@@ -5,26 +5,40 @@ import project4 from "../../../../public/images/projects/HigherMeGP.png";
 import project5 from "../../../../public/images/projects/TechEcommerceGP.png";
 import project6 from "../../../../public/images/projects/projectsGP.png";
 import project7 from "../../../../public/images/projects/RayoLP.png";
-import project8 from "../../../../public/images/projects/BrodeurBg.png";
 import { ProjectRecord } from "./types";
 
 export const PROJECTS_DATA: ProjectRecord[] = [
   {
-    id: "brodeur-development",
-    slug: "brodeur-development",
-    title: "Brodeur Development",
+    id: "memxus",
+    slug: "memxus",
+    title: "Memxus",
     summary:
-      "Corporate website with bespoke HubSpot CMS modules, culture highlights, and applicant funnels.",
+      "Open-source remote MCP server giving Claude, ChatGPT, and Cursor a shared, authenticated, persistent memory layer.",
     description:
-      "Fully responsive HubSpot CMS experience that showcases services, talent culture, and recruiting flows with modular HubL blocks.",
-    projectType: "Corporate Web Platform",
-    liveUrl: "https://brodeurdevelopment.com/",
-    repoUrl: "https://brodeurdevelopment.com/",
-    heroImage: project8,
-    technologies: ["HubSpot CMS", "HubL", "JavaScript", "CSS"],
+      "Full stack AI memory infrastructure: Next.js dashboard, Node.js MCP server, OAuth 2.1 + PKCE with Dynamic Client Registration, Supabase pgvector persistence, and OpenAI embeddings for semantic search across 13 MCP tools. Launched across the Anthropic Claude Connectors Directory, Slack App Marketplace, and Cursor Marketplace.",
+    projectType: "AI Memory Infrastructure",
+    liveUrl: "https://memxus.com",
+    repoUrl: "https://github.com/gpitrella/memxus-remote-mcp",
+    technologies: ["MCP Protocol", "Next.js", "Node.js", "Supabase", "pgvector", "OpenAI Embeddings", "OAuth 2.1"],
     scope: "me",
     featured: true,
-    badges: ["CMS", "Responsive"],
+    badges: ["Open Source", "AI Agents"],
+  },
+  {
+    id: "mcp-secrets-vault",
+    slug: "mcp-secrets-vault",
+    title: "MCP-Secrets-Vault",
+    summary:
+      "Security-first credential manager for AI agents, storing, rotating, and distributing API keys via the MCP protocol.",
+    description:
+      "Open source MCP server with 8 tools (set/get/rotate/list/delete/search/import_env/export_env), AES-256-GCM encryption, SQLite by default, zero third-party crypto dependencies, and OWASP MCP Top 10 mitigations with supply-chain hardening (pinned deps, lockfile, npm audit in CI). Currently in development.",
+    projectType: "AI Agent Security",
+    liveUrl: "https://github.com/gpitrella/mcp-secrets-vault",
+    repoUrl: "https://github.com/gpitrella/mcp-secrets-vault",
+    technologies: ["MCP Protocol", "Node.js", "TypeScript", "AES-256-GCM", "SQLite"],
+    scope: "me",
+    featured: true,
+    badges: ["Open Source", "Security", "In development"],
   },
   {
     id: "car-wash",
@@ -35,7 +49,7 @@ export const PROJECTS_DATA: ProjectRecord[] = [
     description:
       "Marketing experience optimized for conversion and schedule requests, co-built with a small distributed team.",
     projectType: "Landing Page",
-    liveUrl: "https://rayolavados.com",
+    liveUrl: "https://github.com/gpitrella/rayo-landing-page",
     repoUrl: "https://github.com/gpitrella/rayo-landing-page",
     heroImage: project7,
     technologies: ["Next.js", "React", "TypeScript", "TailwindCSS"],
@@ -143,38 +157,6 @@ export const PROJECTS_DATA: ProjectRecord[] = [
     scope: "shared",
     featured: false,
     badges: ["Index"],
-  },
-  {
-    id: "memxus",
-    slug: "memxus",
-    title: "Memxus",
-    summary:
-      "Open-source remote MCP server giving Claude, ChatGPT, and Cursor a shared, authenticated, persistent memory layer.",
-    description:
-      "Full stack AI memory infrastructure: Next.js dashboard, Node.js MCP server, OAuth 2.1 + PKCE with Dynamic Client Registration, Supabase pgvector persistence, and OpenAI embeddings for semantic search across 13 MCP tools. Launched across the Anthropic Claude Connectors Directory, Slack App Marketplace, and Cursor Marketplace.",
-    projectType: "AI Memory Infrastructure",
-    liveUrl: "https://memxus.com",
-    repoUrl: "https://github.com/gpitrella/memxus-remote-mcp",
-    technologies: ["MCP Protocol", "Next.js", "Node.js", "Supabase", "pgvector", "OpenAI Embeddings", "OAuth 2.1"],
-    scope: "me",
-    featured: true,
-    badges: ["Open Source", "AI Agents"],
-  },
-  {
-    id: "mcp-secrets-vault",
-    slug: "mcp-secrets-vault",
-    title: "MCP-Secrets-Vault",
-    summary:
-      "Security-first credential manager for AI agents, storing, rotating, and distributing API keys via the MCP protocol.",
-    description:
-      "Open source MCP server with 8 tools (set/get/rotate/list/delete/search/import_env/export_env), AES-256-GCM encryption, SQLite by default, zero third-party crypto dependencies, and OWASP MCP Top 10 mitigations with supply-chain hardening (pinned deps, lockfile, npm audit in CI). Currently in development.",
-    projectType: "AI Agent Security",
-    liveUrl: "https://github.com/gpitrella/mcp-secrets-vault",
-    repoUrl: "https://github.com/gpitrella/mcp-secrets-vault",
-    technologies: ["MCP Protocol", "Node.js", "TypeScript", "AES-256-GCM", "SQLite"],
-    scope: "me",
-    featured: true,
-    badges: ["Open Source", "Security", "In development"],
   },
   {
     id: "memxus-cursor-plugin",
