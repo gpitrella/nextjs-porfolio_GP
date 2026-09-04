@@ -27,7 +27,7 @@ describe('Task 3.4 - Structured Experience with Bullet Points', () => {
     
     expect(hubsnacksExp).toBeDefined();
     expect(Array.isArray(hubsnacksExp?.work)).toBe(true);
-    expect(hubsnacksExp?.work).toContain('Worked directly with international clients to translate CRM and integration requirements into production features');
+    expect(hubsnacksExp?.work).toContain('Technical lead and point of contact for international clients, translating business, operational, and data requirements into production systems');
     const work = Array.isArray(hubsnacksExp?.work) ? hubsnacksExp.work : [];
     expect(work.some((item) => item.includes('HubL modules'))).toBe(true);
   });

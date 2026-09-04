@@ -2,6 +2,30 @@ import { SkillCategory } from "./types";
 
 export const SKILLS_DATA: SkillCategory[] = [
   {
+    id: "business-systems-analysis",
+    label: "Business & Systems Analysis",
+    skills: [
+      "Requirements Gathering & Documentation",
+      "Translating Business Processes into Technical Solutions",
+      "Stakeholder Management",
+      "Cross-Functional Coordination",
+      "Delivery & Project Coordination",
+      "Process Analysis & Optimization",
+    ],
+  },
+  {
+    id: "industrial-process",
+    label: "Industrial Engineering & Process",
+    skills: [
+      "Kaizen / Continuous Improvement",
+      "Digitalization of Manufacturing & Quality Operations",
+      "Operational Data Visualization",
+      "ISO/TS 16949 & ISO 9001 Environments",
+      "CNC / PLC Programming (G&M Code)",
+      "Supplier Management",
+    ],
+  },
+  {
     id: "ai-agents",
     label: "AI & Agents",
     skills: [

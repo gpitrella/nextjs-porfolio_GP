@@ -28,7 +28,7 @@ export const EDUCATION_DATA: EducationRecord[] = [
   {
     id: "henry-fullstack",
     type: "Full Stack Web Developer",
-    time: "2022",
+    time: "Feb 2022 – Dec 2022",
     place: "Henry",
     info: "Computer Science",
     url: "/diplomas/henry-fullstack-diploma.pdf",
@@ -37,7 +37,7 @@ export const EDUCATION_DATA: EducationRecord[] = [
   {
     id: "uba-automation",
     type: "Postgraduate in Industrial Automation",
-    time: "2013",
+    time: "Apr 2009 – Mar 2011",
     place: "University of Buenos Aires",
     info: "Industrial Automation",
     scope: "me",
@@ -45,7 +45,7 @@ export const EDUCATION_DATA: EducationRecord[] = [
   {
     id: "uncuyo-engineer",
     type: "Industrial Engineer",
-    time: "2008",
+    time: "Feb 2002 – Aug 2008",
     place: "National University of Cuyo",
     info: "Engineering",
     scope: "me",
