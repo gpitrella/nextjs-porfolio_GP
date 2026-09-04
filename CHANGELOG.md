@@ -1,3 +1,10 @@
+## [1.6.0](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.5.0...v1.6.0) (2026-09-04)
+
+
+### ✨ Features
+
+* reposition portfolio around Industrial Engineering + Software ([614ff3f](https://github.com/gpitrella/nextjs-porfolio_GP/commit/614ff3f2e14b5207cf4c909f7fdcd44c51a93a2b))
+
 ## [1.5.0](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.4.2...v1.5.0) (2026-08-21)
 
 
