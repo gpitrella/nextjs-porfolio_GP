@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.6.0...v1.6.1) (2026-09-04)
+
+
+### 🐛 Bug Fixes
+
+* add .gitattributes to stop git corrupting binary files ([a4c16b8](https://github.com/gpitrella/nextjs-porfolio_GP/commit/a4c16b85cb7d008e8f4db4494fd34ed5dec8ae91))
+
 ## [1.6.0](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.5.0...v1.6.0) (2026-09-04)
 
 
