@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.6.1...v1.6.2) (2026-09-04)
+
+
+### 🐛 Bug Fixes
+
+* refresh projects list per user feedback ([b5b92de](https://github.com/gpitrella/nextjs-porfolio_GP/commit/b5b92def4675eb368f7ad2fb190bc9a9747f2e06))
+
 ## [1.6.1](https://github.com/gpitrella/nextjs-porfolio_GP/compare/v1.6.0...v1.6.1) (2026-09-04)
 
 
